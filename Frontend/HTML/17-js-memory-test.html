@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        :root {
+            --color1: #4e483d76;
+        }
+
+        section {
+            --color1: #918b8276;
+            background-color: var(--color1);
+            position: sticky;
+
+            width: 66vmin;
+            margin: 20px auto;
+            height: 80vh;
+            border: 1px solid rgb(79, 60, 60);
+            border-radius: 9px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 5px 5px 2px;
+        }
+
+        .main {
+            font-family: 'Jost', sans-serif;
+            line-height: 1.1;
+        }
+
+        .img {
+
+            width: 99%;
+            border-radius: 9px;
+            height: 45vh;
+            position: relative;
+            left: 0.5%;
+            top: 1px;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 9px;
+        }
+
+        .capsule1 {
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 5px
+        }
+
+        .capsule2 {
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 5px;
+
+        }
+
+        h2 {
+            margin-top: 2px;
+            padding-left: 5px;
+        }
+
+        p {
+            margin-top: -10px;
+            overflow: hidden;
+            padding-left: 5px;
+        }
+
+        button {
+
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px rgb(124, 105, 105);
+        }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="img">
+                <img src="bridge-sea-middle-mountains.jpg" alt="image">
+            </div>
+            <div class="capsule1">
+                Photo
+            </div>
+            <div class="capsule2">
+                Bridge
+            </div>
+            <h2>
+                About this image
+            </h2>
+            <div>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti neque nam perferendis odio. Non,
+                    nostrum Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore itaque, animi quam
+                    pariatur, ipsum nihil reprehenderit harum consequuntur libero dignissimos officiis quos excepturi
+                    explicabo iste unde ut dolorum ducimus et?
+                    voluptate
+                </p>
+            </div>
+            <div class="button">
+                <button class="button">Read more</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

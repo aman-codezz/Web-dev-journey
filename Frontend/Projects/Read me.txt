@@ -1,0 +1,6 @@
+
+                                                                ABOUT VIDEO 34 (ON FLOAT AND CLEAR)--->>
+
+1. > They first tought us about the how to use float and values of it like in style u should write like that-->> float:left/rght/;
+2. > Then they show u can fix if after using float u seeing some overfloaw issue u can fix it with--->> display:float-root;
+3. > Then after it we study about clear this is how u can use it-->> clear:right/left/both; this is will not allow to float somethiing on your preferable side.

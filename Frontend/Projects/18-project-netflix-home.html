@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix | Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("Rectangle 1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-top: 25px;
+
+        }
+
+        .nav1 {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav1 div {
+            font-size: 24px;
+            color: white;
+            padding: 10px;
+        }
+
+
+        .nav2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search_button {
+            background-color: rgba(240, 248, 255, 0);
+            border: none;
+            transition: transform 200ms ease-out 1ms;
+            cursor: pointer;
+        }
+
+        .search_button:active {
+            transform: scale(1.3, 1.3);
+        }
+
+        .search {
+            width: 30.83px;
+            height: 30.84px;
+            background-color: none;
+            padding: 20px;
+        }
+
+        .search img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .profile {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+        }
+
+        .profile img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        h3 {
+
+            color: white;
+            font-size: 24px;
+            font-weight: 100;
+            padding: 35px;
+            padding-bottom: 25px;
+            margin-top: 8px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+            padding-left: 35px;
+        }
+
+        h4 {
+            color: white;
+            font-size: 22px;
+            padding-left: 35px;
+            padding-top: 25px;
+        }
+
+        article {
+            font-size: 20px;
+            color: rgb(177, 174, 174);
+            padding-left: 35px;
+            padding-top: 13px;
+        }
+
+        .star {
+            height: 20px;
+            padding-left: 35px;
+            margin-top: 13px;
+        }
+
+        .star img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 35px;
+            margin-top: 35px;
+            margin-bottom: 35px;
+
+        }
+
+        .button1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-right: 35px;
+            transition: transform 200ms ease-out 1ms;
+        }
+
+        .button1:active {
+            transform: scale(1.3, 1.3);
+        }
+
+        .play {
+            height: 20px;
+            width: 20px;
+            padding-left: 5px;
+
+        }
+
+        .play img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .button2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgba(255, 0, 0, 0);
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: transform 200Ms ease-out 1ms;
+        }
+
+        .button2:active {
+            transform: scale(1.3, 1.3);
+        }
+
+        .heading {
+            display: flex;
+
+            width: 54vw;
+            height: 5vh;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+        .heading h3 {
+            font-size: 15px;
+            font-weight: 700;
+            padding: 0px;
+            margin-top: -1px;
+        }
+
+        .arrows .arrow_left {
+            height: 25px;
+            width: 25px;
+            margin-right: 10px;
+        }
+
+        .arrow_left img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .arrows .arrow_right {
+            height: 25px;
+            width: 25px;
+
+        }
+
+        .arrow_right img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .arrow_button1 {
+            background-color: rgba(240, 248, 255, 0);
+            border: none;
+            cursor: pointer;
+            transition: transform 200ms ease-out 1ms;
+        }
+
+        .arrow_button1:active {
+            transform: scale(1.3, 1.3);
+        }
+
+        .arrow_button2 {
+            background-color: rgba(240, 248, 255, 0);
+            border: none;
+            cursor: pointer;
+            transition: transform 100ms ease-out 1ms;
+        }
+
+        .arrow_button2:active {
+            transform: scale(1.3, 1.3);
+        }
+
+        .more_series {
+
+            width: 55vw;
+            height: 20vh;
+            /* margin-left: 35px; */
+            margin-top: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box {
+            border: none;
+            height: 18vh;
+            width: 10vw;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blocks {
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: center;
+        }
+        .side_block{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .side_block .block1 {
+            background-color: red;
+            height: 35px;
+            width: 20px;
+        }
+        .side_block .block2{
+            color: white;
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav1">
+            <img class="image" src="netflix-logo-png-2562 1.png" alt="logo">
+            <div> | Thursday July 18th </div>
+        </div>
+        <div class="nav2">
+            <button class="search_button"><img class="search" src="fe_search.png" alt="search"></button>
+            <img class="profile" src="Ellipse 2.png" alt="Profile logo">
+        </div>
+        </div>
+    </header>
+    <main>
+        <h3> Drama | Thriller | Supernatural </h3>
+        <h1>Stranger Things</h1>
+        <h4>2019 | DIRECTOR: Shawn Levy | seasons: 3 (5 Episodes)</h4>
+        <article>
+            <pre>1980s Indiana, a group of young friends witness supernatural forces and
+secret government exploits. As they search for answers, the children
+unravel a series of extraordinary mysteries.</pre>
+        </article>
+        <div class="star">
+            <img src="Group 5.png" alt="" class="src">
+        </div>
+        <section class="buttons">
+            <button class="button1">STREAM NOW
+                <div class="play">
+                    <img src="ant-design_play-circle-filled.png" alt="" class="src">
+                </div>
+            </button>
+            <button class="button2">ALL EPISODES</button>
+        </section>
+        <div class="heading">
+            <h3>POPULAR THIS WEEK</h3>
+            <div class="arrows">
+                <button class="arrow_button1"><img class="arrow_left" src="Group 2.png" alt="" class="src"></button>
+                <button class="arrow_button2"><img class="arrow_right" src="Group 1.png" alt="" class="src"></button>
+            </div>
+        </div>
+        <article class="blocks">
+            <section class="more_series">
+                <div class="box box1"><img src="Rectangle 7.png" alt=""></div>
+                <div class="box box2"><img src="wednesday-netflix-3840x2160-23051.jpg" alt=""></div>
+                <div class="box box3"><img src="Rectangle 11.png" alt=""></div>
+                <div class="box box4"><img src="Rectangle 6.png" alt=""></div>
+                <div class="box box5"><img src="Rectangle 8.png" alt=""></div>
+                <div class="box box6"><img src="Rectangle 9.png" alt=""></div>
+                <div class="box box7"><img src="one-piece-season-2-3840x2160-23673.jpg" alt=""></div>
+            </section>
+            <section class="side_block">
+                <div class="block1"></div>
+                <div class="block2"> 16+ </div>
+            </section>
+        </article>
+    </main>
+
+</body>
+
+</html>

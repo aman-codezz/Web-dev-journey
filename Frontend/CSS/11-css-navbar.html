@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>design nav bar</title>
+    <style>
+        :root {
+            --color: rgb(90, 68, 68);
+            --seccolor: rgb(99, 178, 148);
+
+        }
+
+        @media only screen and (max-width:500px) {
+            header {
+                 position: sticky;
+                top: 0px;
+            }
+
+            nav{
+                background-color: var(--color);
+              
+                width: 100%;
+                height: auto;
+                border: 2px solid rgb(62, 41, 41);
+                border-radius: 10px;
+                box-shadow: 5px 5px 2px rgb(75, 90, 58);
+                top: 0px;
+            }
+
+            .main {
+               
+                top: 0px;
+                text-align: center;
+                color: white;
+                list-style-type: none;
+                width: 100%;
+                height: 8vh;
+                padding: 0px;
+            }
+
+            ul li {
+                display: inline-block;
+                margin: 10px;
+                margin-top: 15px;
+            }
+        }
+
+        table th,
+        td {
+            margin: 10px;
+            padding: 10px;
+        }
+        @media only screen and (min-width:501px) {
+            header {
+                position: sticky;
+                top: 0px;
+            }
+
+            nav{
+                background-color: var(--color);
+                width: 100%;
+                height: auto;
+                border: 2px solid rgb(62, 41, 41);
+                border-radius: 10px;
+                box-shadow: 5px 5px 2px rgb(75, 90, 58);
+                top: 0px;
+            }
+
+            .main {
+                text-align: center;
+                color: white;
+                list-style-type: none;
+                width: 100%;
+                height: 8vh;
+                padding: 0px;
+            }
+            ul li{
+                display: inline-block;
+                width: 100px;
+                margin: 20px auto;
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav >
+            <ul class="main">
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+                <li>GALLERY</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Here we are going to create an table for products</h2>
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Product 1</td>
+                <td>$10</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>$20</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Product 3</td>
+                <td>$15</td>
+                <td>75</td>
+            </tr>
+        </table>
+        <div class="about_table">
+            <p>This is a simple product table created using HTML. It contains three columns: Product Name, Price, and
+                Quantity. Each row represents a different product with its corresponding details. You can customize the
+                table by adding more products or changing the styling as needed.</p>
+            <p>To create a table in HTML, we use the <code>&lt;table&gt;</code> element, and within it, we define the
+                header row using <code>&lt;tr&gt;</code> for the row and <code>&lt;th&gt;</code> for the header cells.
+                The data rows are created using <code>&lt;tr&gt;</code> for each row and <code>&lt;td&gt;</code> for the
+                data cells. You can also apply CSS styles to enhance the appearance of the table.</p>
+            <p>Overall, tables are a great way to organize and display data in a structured format on a webpage. They can be
+                used for various purposes, such as displaying product information, schedules, or any other tabular data.</p>
+            <p>Feel free to modify the table and add more products or customize the styling to suit your needs!</p>
+            <p>Remember to always ensure that your tables are accessible and properly structured for better user experience and SEO.</p>
+        </div>
+    </main>
+</body>
+
+</html>

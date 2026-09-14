@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout design</title>
+    <style>
+    ul{
+        border:2px solid black;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row wrap;
+        height: 10vh;
+        gap:10px 20px; 
+        overflow: auto;
+    }
+    img{
+        width:23px;
+        height: 23px;
+        
+    }
+    main{
+        margin-top: -17px;
+        border: 2px solid black;
+        display: flex;
+        justify-content:space-around;
+        flex-flow: row wrap;
+        align-items: center;
+        height: 40vh;
+        gap: 20px 90px;
+    }
+    .boxone{
+        border: 2px solid green;
+        padding: 30px; 
+        align-self:center ;
+        justify-self:flex-start;
+    }
+    .boxtwo{
+        border: 2px solid green;
+        padding: 30px; 
+        align-self:center ;
+        justify-self:flex-start;
+    }
+
+    </style>
+</head>
+<body>
+     <header>
+        <nav>
+            <ul>
+                <img src="buisness_logo.jpg" alt="logo">
+                <li>Home</li>
+                <li>Contact</li>
+                <li>More</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="boxone">
+            <p></p>
+        </div>
+        <div class="boxtwo">
+            <p></p>
+        </div>
+    </main>
+    
+</body>
+</html>

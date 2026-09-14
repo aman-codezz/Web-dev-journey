@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile,
+        tablet and more.
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+
+        }
+
+        @media only screen and (min-width: 800px) {
+
+            :root {
+                --background-color: red;
+                --color: white;
+                --padding: 10px 148px 0px 148px;
+            }
+
+
+            .banner {
+                background: linear-gradient(90deg,
+                        #4b22b6 0%,
+                        #6b22b6 30%,
+                        #9b155e 65%,
+                        #e50914 100%);
+                box-shadow: 0 2px 12px rgba(0, 0, 0, .35);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 800;
+                border: 1px solid black;
+                padding: 15px;
+                position: sticky;
+                background-color: white;
+                top: 0px;
+            }
+
+            .banner svg {
+                padding-right: 10px;
+            }
+
+            .main-background {
+                background: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 1.5) 0%,
+                        rgba(0, 0, 0, .55) 25%,
+                        rgba(0, 0, 0, .85) 70%,
+                        rgba(0, 0, 0, .85) 100%),
+                    url("netflixkgroundimg.jpg.jpg");
+            }
+
+            .banner2 {
+
+                height: 80px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: var(--padding);
+            }
+
+            .banner2_inside {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .language {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                height: 32px;
+                padding: 0 12px;
+
+                border: 1px solid rgba(255, 255, 255, .45);
+                border-radius: 4px;
+
+                background: black;
+
+                transition: all .15s ease;
+
+                position: relative;
+            }
+
+            .language:focus-within {
+                outline: 2px solid white;
+                outline-offset: 2px;
+            }
+
+            .lang_icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            .language select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                border: none;
+                outline: none;
+
+                background: transparent;
+                color: white;
+
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .language select option {
+                color: black;
+            }
+
+            .arrow {
+                color: white;
+                font-size: 10px;
+                pointer-events: none;
+            }
+
+            .button1 {
+                height: 32px;
+
+                padding: 0 16px;
+
+                border: none;
+                border-radius: 4px;
+
+                background: #e50914;
+                color: white;
+
+                font-size: 14px;
+                font-weight: 600;
+
+                cursor: pointer;
+
+                transition: background-color .15s ease;
+            }
+
+            .button1:hover {
+                background: #c11119;
+            }
+
+            .button1:focus-visible {
+                outline: 2px solid white;
+                outline-offset: 2px;
+            }
+
+            .main_heading {
+
+
+                margin-top: 40px;
+                height: 80vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                line-height: 1.3;
+                padding: 0 32px 32px 32px;
+            }
+
+            .headings {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                width: 500px;
+                height: 80%;
+            }
+
+            .headings h1 {
+                font-size: 4em;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .headings .first_h2 {
+                font-size: 1.6em;
+                line-height: 0;
+            }
+
+            .first_p {
+                font-size: large;
+                font-weight: 600;
+                margin-top: 0px;
+                position: relative;
+                top: 20px;
+            }
+
+            .email {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .email input {
+                background-color: rgba(167, 164, 164, 0.137);
+                border: 2px solid grey;
+                border-radius: 2px;
+                width: 260px;
+                padding: 24px 16px 16px 8px;
+                margin-right: 6px;
+            }
+            .email input::placeholder{
+                color: #858383;
+            } 
+
+            .email input:focus {
+                /* outline: 4px double white; */
+                border-radius: 2px;
+            }
+
+            .email button {
+                border-radius: 5px;
+                padding: 16px 22px 16px 22px;
+                font-size: 21px;
+                width: 260px;
+                background-color: var(--background-color);
+                color: var(--color);
+                cursor: pointer;
+            }
+
+            .last_p {
+                margin-top: -30px;
+            }
+
+            .second_h2 {
+                padding: var(--padding)
+            }
+
+            .container_1 {
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                align-items: center;
+                height: 40vh;
+                padding: var(--padding);
+            }
+
+            .box {
+                position: relative;
+                margin: 10px;
+                height: 90%;
+                width: 30%;
+                transition: transform 300ms ease-in-out 1ms;
+                cursor: pointer;
+            }
+
+            .box:hover {
+                transform: scale(1.1, 1.1);
+            }
+
+            .box img {
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .box_button {
+                text-align: center;
+                height: 45%;
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                width: 30px;
+                margin: right 10px;
+                font-size: 25px;
+                opacity: 1;
+                color: rgba(90, 88, 88, 0.712);
+                transition: transform 200ms ease-in-out 1ms;
+            }
+
+            .box_button:hover {
+                transform: scale(1.1, 1.1);
+                color: white;
+                opacity: 0.7;
+            }
+
+            .box1 .outlined_number,
+            .box2 .outlined_number,
+            .box3 .outlined_number,
+            .box4 .outlined_number,
+            .box5 .outlined_number,
+            .box6 .outlined_number {
+                position: absolute;
+                left: -18px;
+                /* card ke bahar */
+                bottom: -20px;
+                /* neeche touch karte hue */
+                font-size: 90px;
+                font-weight: 900;
+                font-family: sans-serif;
+                color: black;
+                -webkit-text-stroke: 3px white;
+                z-index: 2;
+            }
+
+            .third_h2 {
+                background-color: black;
+                --padding: 50px 148px 0px 148px;
+                padding: var(--padding);
+            }
+
+            .container_2 {
+                background-color: rgba(0, 0, 0, 0);
+                height: 50vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: row wrap;
+                --padding: 10px 137px 0px 137px;
+                padding: var(--padding);
+            }
+
+            .flexes {
+                background: linear-gradient(to bottom,
+                        #1f2145,
+                        #231525);
+                margin: 10px;
+                position: relative;
+                height: 90%;
+                width: 22.89%;
+
+                border-radius: 18px;
+            }
+
+            .flexes img {
+                position: absolute;
+                width: 72px;
+                height: 72px;
+                right: 18px;
+                bottom: 18px;
+            }
+
+            .container_2_h3 {
+                margin: 16px 15px 0px 10px;
+                font-weight: 100;
+                color: white;
+            }
+
+            .container_2_p {
+                color: grey;
+                margin: 16px 15px 0px 10px;
+                font-weight: 100;
+
+            }
+
+            .forth_h2 {
+                background-color: black;
+                padding: var(--padding);
+                margin-top: 30px;
+            }
+
+            .container_3 {
+                background-color: black;
+                margin-top: 15px;
+                height: 100vh;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 5px;
+                padding: 0px 148px 0px 148px;
+            }
+
+            .grids {
+                border: none;
+                color: white;
+                background-color: #414141;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                transition: background-color 300ms ease-in-out 10ms;
+            }
+
+            .grids:hover {
+                background-color: grey;
+            }
+
+            .grids strong {
+                position: absolute;
+
+                left: 20px;
+                font-size: 26px;
+                font-weight: 500;
+            }
+
+            .grids img {
+                position: absolute;
+                right: 20px;
+            }
+
+            .first_h3 {
+                background-color: black;
+                margin-top: 60px;
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .container_4 {
+                background-color: black;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container_4 input {
+                background-color: black;
+                border: 2px solid grey;
+                border-radius: 5px;
+                width: 500px;
+                padding: 24px 16px 16px 8px;
+                margin-right: 6px;
+            }
+
+            .container_4 input:focus {
+                /* outline: 4px double red; */
+                border-radius: 4px;
+            }
+
+            .container_4 button {
+                border-radius: 5px;
+                padding: 16px 22px 16px 22px;
+                font-size: 21px;
+                font-weight: 600;
+                width: 320px;
+                background-color: var(--background-color);
+                color: var(--color);
+                cursor: pointer;
+            }
+
+            article .one {
+                font-size: 18px;
+                margin-top: 20px;
+                font-weight: 600;
+                color: grey;
+                padding: 0px 148px 0px 148px;
+            }
+
+            article .two {
+                font-size: 18px;
+                margin-top: 50px;
+                font-weight: 600;
+                color: grey;
+                padding: 0px 148px 0px 148px;
+            }
+
+            .container_last {
+                background-color: black;
+                margin-top: 40px;
+                padding: var(--padding);
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 20px 20px 20px 20px;
+                height: 25vh;
+                row-gap: 15px;
+                column-gap: 70px;
+            }
+
+            .gridss a {
+                /* border: 1px solid black; */
+                color: grey;
+            }
+
+            .last-div {
+                background-color: black;
+                height: 40vh;
+                display: flex;
+                margin-top: -30px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                position: relative;
+                --padding: 0px 148px 0px 148px;
+                padding: var(--padding);
+            }
+
+            .last-div select {
+
+                /* margin-top: 20px; */
+                width: 150px;
+                font-size: 16px;
+            }
+
+            .last-div .second_last_p {
+
+                margin-top: 30px;
+                font-size: 16px;
+            }
+
+            .last-div .last_p {
+
+                margin-top: 25px;
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (min-width :550px) and (max-width: 799px) {
+            :root {
+                --background-color: red;
+                --color: white;
+                --padding: 12px 27px 0px 27px;
+            }
+
+            .banner {
+                background: linear-gradient(90deg,
+                        #4b22b6 0%,
+                        #6b22b6 30%,
+                        #9b155e 65%,
+                        #e50914 100%);
+                box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 300;
+                padding: 7px;
+                position: sticky;
+                background-color: white;
+                top: 0px;
+                height: 4vh;
+            }
+
+            .banner svg {
+                padding-right: 10px;
+            }
+
+            .main-background {
+                background: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 10) 0%,
+                        rgba(0, 0, 0, .65) 25%,
+                        rgba(0, 0, 0, .90) 70%,
+                        rgba(0, 0, 0, 0.99) 100%),
+                    url("netflixkgroundimg.jpg.jpg");
+            }
+
+            .banner2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: var(--padding);
+            }
+
+            .banner2 img {
+                width: 95px;
+                height: 30px;
+            }
+
+            .banner2_inside {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 10px;
+            }
+
+            .language {
+                display: flex;
+                align-items: center;
+                gap: px;
+                height: 25px;
+                padding: 3px 15px;
+
+                border: 1px solid rgba(255, 255, 255, .45);
+                border-radius: 4px;
+
+                background: rgba(0, 0, 0, 0.296);
+
+                transition: all .15s ease;
+
+                position: relative;
+            }
+
+            .language:focus-within {
+                outline: 2px solid white;
+                outline-offset: 2px;
+            }
+
+            .language img {
+                width: 15px;
+                height: 15px;
+                padding-right: 10px;
+
+            }
+
+            .language select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                border: none;
+                outline: none;
+
+                background: transparent;
+                color: white;
+
+                font-size: 12px;
+                cursor: pointer;
+            }
+
+            .language select option {
+                color: black;
+            }
+
+            .arrow {
+                color: white;
+                font-size: 8px;
+                pointer-events: none;
+                padding-left: 10px;
+            }
+
+            .banner2_inside button {
+                background-color: var(--background-color);
+                color: var(--color);
+                padding: 8px 15px 8px 15px;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .main_heading {
+                margin-top: 30px;
+                height: 50vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                line-height: 1.3;
+                padding: 0 32px 32px 32px;
+            }
+
+            .headings {
+                width: 80%;
+                height: 60%;
+                text-align: center;
+            }
+
+            .headings h2 {
+                font-size: medium;
+                font-weight: 100;
+                margin-top: 10px;
+            }
+
+            .headings p {
+                margin-top: 15px;
+            }
+
+            .headings .email {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .email input {
+                border: 1px solid grey;
+                width: 150px;
+                background-color: rgba(0, 0, 0, 0.64);
+                padding: 17px;
+                border-radius: 5px;
+            }
+
+            .email input:active,
+            .eamil input:focus {
+                outline: 2px double white;
+            }
+
+            .email button {
+                margin-left: 10px;
+                padding: 15px;
+                width: 200px;
+                font-size: large;
+                background-color: var(--background-color);
+                color: var(--color);
+                font-weight: 700;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .second_h2 {
+                font-size: medium;
+                font-weight: 700;
+                padding: var(--padding);
+            }
+
+            .container_1 {
+                --padding: 0px 27px 0px 27px;
+                padding: var(--padding);
+                height: 40vh;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                column-gap: 20px;
+                background: linear-gradient(to bottom,
+                        rgb(255, 255, 255) 0%,
+                        rgba(128, 0, 128, 0.07) 20%,
+                        rgba(128, 0, 128, 0) 50%,
+                        rgba(0, 0, 0, 0.097)80%,
+                        black 100%);
+                background: linear-gradient(to right,
+                        rgba(0, 0, 0, 0.105)0%,
+                        rgba(255, 252, 252, 0.007)25%,
+                        rgba(255, 252, 252, 0.007)75%,
+                        rgba(0, 0, 0, 0.105)100%);
+            }
+
+            .container_1 .box {
+                height: 15vh;
+                position: relative;
+                width: 15vw;
+
+            }
+
+            .box img {
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+                border: none;
+                object-fit: cover;
+            }
+
+            .box_button {
+                text-align: center;
+                height: 25%;
+                cursor: pointer;
+                border: none;
+                border-radius: 6px;
+                width: 20px;
+                margin: right 10px;
+                font-size: 25px;
+                opacity: 1;
+                color: rgb(201, 198, 198);
+                transition: transform 200ms ease-in-out 1ms;
+                background-color: #414141;
+            }
+
+            .box1 .outlined_number,
+            .box2 .outlined_number,
+            .box3 .outlined_number,
+            .box4 .outlined_number,
+            .box5 .outlined_number,
+            .box6 .outlined_number {
+                position: absolute;
+                left: -10px;
+                /* card ke bahar */
+                bottom: -5px;
+                /* neeche touch karte hue */
+                font-size: 90px;
+                font-weight: 900;
+                /* font-family: sans-serif; */
+                color: black;
+                -webkit-text-stroke: 1.5px white;
+                z-index: 2;
+            }
+
+            .third_h2 {
+                padding: var(--padding);
+                font-size: medium;
+                font-weight: 700;
+                margin-top: 50px;
+            }
+
+            .container_2 {
+                padding: var(--padding);
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px 10px;
+            }
+
+            .flexes {
+                flex-grow: 1;
+                position: relative;
+                border-radius: 20px;
+                height: 25vh;
+                background: linear-gradient(to bottom,
+                        #1f2145,
+                        #231525);
+            }
+
+            .flexes img {
+                position: absolute;
+                right: 5px;
+                bottom: 10px;
+            }
+
+            .flexes h3 {
+                margin: 25px 10px 0px 15px;
+                font-weight: 700;
+            }
+
+            .flexes p {
+                margin: 10px 15px 0px 15px;
+                color: rgba(255, 255, 255, 0.613);
+            }
+
+            .forth_h2 {
+                padding: var(--padding);
+                font-size: medium;
+                font-weight: 700;
+                margin-top: 50px;
+            }
+
+            .container_3 {
+                padding: var(--padding);
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                height: 55vh;
+                gap: 10px;
+            }
+
+            .grids {
+                font-size: 18px;
+                padding-left: 10px;
+                border: none;
+                color: white;
+                background-color: #414141;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                transition: background-color 300ms ease-in-out 10ms;
+            }
+
+            .grids img {
+                position: absolute;
+                right: 10px;
+            }
+
+            .first_h3 {
+                text-align: center;
+                margin-top: 50px;
+                padding: var(--padding);
+                font-size: medium;
+                font-weight: 350;
+
+            }
+
+            .container_4 {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container_4 input {
+                border: 1px solid grey;
+                width: 50vw;
+                background-color: rgba(0, 0, 0, 0.64);
+                padding: 17px;
+                border-radius: 5px;
+            }
+
+            .container_4 input:active,
+            .container_4 input:focus {
+                outline: 2px double white;
+            }
+
+            .container_4 button {
+                margin-left: 10px;
+                padding: 15px;
+                width: 200px;
+                font-size: large;
+                background-color: var(--background-color);
+                color: var(--color);
+                font-weight: 700;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .one {
+                padding: var(--padding);
+                margin-top: 5px;
+                color: #414141;
+            }
+
+            .two {
+                padding: var(--padding);
+                margin-top: 50px;
+            }
+
+            .container_last {
+                padding: var(--padding);
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                row-gap: 17px;
+                column-gap: 10px;
+                font-size: small;
+                /* color: #414141; */
+            }
+
+            /* .gridss:link{
+                color:#414141;
+            } */
+            .last-div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: var(--padding);
+            }
+
+            .last-div .language {
+
+                margin-top: 50px;
+            }
+
+            .second_last_p {
+
+                margin-top: 25px;
+                color: #8d8d8d;
+                font-weight: 700;
+            }
+
+            .last_p {
+
+                margin-top: 25px;
+                color: #414141;
+            }
+        }
+
+        @media only screen and (max-width :450px) {
+            :root {
+                --background-color: red;
+                --color: white;
+                --padding: 15px 22px 0px 18px;
+            }
+
+            .main-background {
+                background: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 1) 0%,
+                        rgba(13, 1, 1, 0.65) 25%,
+                        rgba(0, 0, 0, .75) 70%,
+                        rgba(0, 0, 0, .89) 85%0%,
+                        rgba(0, 0, 0, 0.99) 100%),
+                    url("netflixkgroundimg.jpg.jpg");
+            }
+
+            .banner {
+                display: none;
+            }
+
+            .banner2 {
+                padding: var(--padding);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .banner2 .img_1 {
+                width: 125px;
+                height: 40px;
+            }
+
+            .banner2_inside {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .language {
+                display: flex;
+                align-items: center;
+
+                height: 25px;
+                padding: 3px 7px;
+
+                border: 1px solid rgba(255, 255, 255, .45);
+                border-radius: 4px;
+
+                background: rgba(0, 0, 0, 0.296);
+
+                transition: all .15s ease;
+
+                position: relative;
+            }
+
+            .language:focus-within {
+                outline: 2px solid white;
+                outline-offset: 2px;
+            }
+
+            .language img {
+                width: 15px;
+                height: 15px;
+                padding-right: 10px;
+
+            }
+
+            .language select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                border: none;
+                outline: none;
+
+                background: transparent;
+                color: white;
+
+                font-size: 12px;
+                cursor: pointer;
+            }
+
+            .language select option {
+                color: black;
+            }
+
+            .arrow {
+                color: white;
+                font-size: 8px;
+                pointer-events: none;
+                padding-left: 10px;
+            }
+
+            .banner2_inside button {
+                background-color: var(--background-color);
+                color: var(--color);
+                padding: 8px 15px 8px 15px;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .main_heading {
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 55vh;
+                padding: var(--padding);
+            }
+
+            .headings {
+                width: 90%;
+                height: 80%;
+                text-align: center;
+            }
+
+            .headings h2 {
+                margin-top: 7px;
+                font-size: medium;
+            }
+
+            .headings p {
+                margin-top: 15px;
+                font-size: medium;
+            }
+
+            .email {
+                width: 100%;
+                margin-top: 15px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .email input {
+                border: 1px solid grey;
+                width: 280px;
+                background-color: rgba(0, 0, 0, 0.64);
+                padding: 17px;
+                border-radius: 5px;
+            }
+
+            .email input:active,
+            .eamil input:focus {
+                outline: 2px double white;
+            }
+
+            .email button {
+                margin-top: 10px;
+                margin-left: 10px;
+                padding: 15px;
+                width: 200px;
+                font-size: large;
+                background-color: var(--background-color);
+                color: var(--color);
+                font-weight: 700;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .email .last_p {
+                color: #be0000;
+                font-size: medium;
+                font-weight: 100;
+                margin-top: 20px;
+            }
+
+            .second_h2 {
+                margin-top: 30px;
+                font-size: large;
+                padding: var(--padding);
+            }
+
+            .box3 {
+                display: none;
+            }
+
+            .box4 {
+                display: none;
+            }
+
+            .box5 {
+                display: none;
+            }
+
+            .box6 {
+                display: none;
+            }
+
+            .container_1 {
+                height: 30vh;
+                margin-top: -20px;
+
+                display: flex;
+                flex-flow: row wrap;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                padding: var(--padding);
+            }
+
+            .container_1 .box {
+                height: 25vh;
+                position: relative;
+                width: 35vw;
+
+            }
+
+            .box img {
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+                border: none;
+                object-fit: cover;
+            }
+
+            .box_button {
+                text-align: center;
+                height: 55%;
+                cursor: pointer;
+                border: none;
+                border-radius: 6px;
+                width: 20px;
+                margin: right 10px;
+                font-size: 25px;
+                opacity: 1;
+                color: rgb(201, 198, 198);
+                transition: transform 200ms ease-in-out 1ms;
+                background-color: #414141;
+            }
+
+            .box1 .outlined_number,
+            .box2 .outlined_number,
+            .box3 .outlined_number,
+            .box4 .outlined_number,
+            .box5 .outlined_number,
+            .box6 .outlined_number {
+                position: absolute;
+                left: -10px;
+                /* card ke bahar */
+                bottom: -5px;
+                /* neeche touch karte hue */
+                font-size: 90px;
+                font-weight: 900;
+                /* font-family: sans-serif; */
+                color: black;
+                -webkit-text-stroke: 1.5px white;
+                z-index: 2;
+            }
+            .third_h2{
+                padding: var(--padding);
+                font-size: large;
+            }
+             .container_2 {
+                padding: var(--padding);
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px 10px;
+            }
+
+            .flexes {
+                flex-grow: 1;
+                position: relative;
+                border-radius: 20px;
+                height: 27vh;
+                background: linear-gradient(to bottom,
+                        #1f2145,
+                        #231525);
+            }
+
+            .flexes img {
+                position: absolute;
+                right: 5px;
+                bottom: 10px;
+            }
+
+            .flexes h3 {
+                margin: 25px 10px 0px 15px;
+                font-weight: 700;
+            }
+
+            .flexes p {
+                margin-left: 10px;
+                margin: 10px 15px 0px 15px;
+                color: rgba(255, 255, 255, 0.613);
+            }
+            .forth_h2{
+                padding: var(--padding);
+                font-size: large;
+            }
+            .container_3{
+                padding: var(--padding);
+                display: grid;
+                height: 50vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 5px;
+            }
+             .grids {
+                font-size: 14px;
+                padding-left: 10px;
+                border: none;
+                color: white;
+                background-color: #414141;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                transition: background-color 300ms ease-in-out 10ms;
+            }
+
+            .grids img {
+                position: absolute;
+                right: 10px;
+            }
+            .first_h3{
+                 padding: var(--padding);
+                font-size: large;
+            }
+             .container_4 {
+
+                padding: var(--padding);
+                margin-top: 15px;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                /* justify-content: center; */
+            }
+
+            .container_4 input {
+                border: 1px solid grey;
+                width: 80vw;
+                background-color: rgba(0, 0, 0, 0.64);
+                padding: 17px;
+                border-radius: 5px;
+            }
+
+            .container_4 input:active,
+            .container_4 input:focus {
+                outline: 2px double white;
+            }
+
+            .container_4 button {
+                margin-top: 10px;
+                /* margin-left: 10px; */
+                padding: 15px;
+                width: 200px;
+                font-size: medium;
+                background-color: var(--background-color);
+                color: var(--color);
+                font-weight: 700;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .one {
+                padding: var(--padding);
+                margin-top: 5px;
+                color: #414141;
+            }
+
+            .two {
+                padding: var(--padding);
+                margin-top: 50px;
+            }
+            .container_last {
+                padding: var(--padding);
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                row-gap: 17px;
+                column-gap: 10px;
+                font-size: small;
+                /* color: #414141; */
+
+        }
+         .last-div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: var(--padding);
+            }
+
+            .last-div .language {
+
+                margin-top: 30px;
+            }
+
+            .second_last_p {
+
+                margin-top: 25px;
+                color: #8d8d8d;
+                font-weight: 700;
+            }
+
+            .last_p {
+
+                margin-top: 25px;
+                color: #414141;
+                margin-bottom: 50px;
+            }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <svg viewBox="0 0 24 24" width="24" height="24" data-icon="GiftMedium" data-icon-id=":rs:"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" role="img">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M8.39 1A3.4 3.4 0 0 0 5 4.39v.11q0 .82.34 1.5H4a2 2 0 0 0-2 2v2a2 2 0 0 0 1 1.73V20c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-8.27A2 2 0 0 0 22 10V8a2 2 0 0 0-2-2h-1.34q.33-.68.34-1.5v-.11a3.39 3.39 0 0 0-6.53-1.26L12 4.3l-.47-1.18A3.4 3.4 0 0 0 8.39 1M12 8h8v2H4V8zm5-3.5c0 .83-.67 1.5-1.5 1.5h-2.02l.85-2.13A1.39 1.39 0 0 1 17 4.4zM10.52 6l-.85-2.13A1.39 1.39 0 0 0 7 4.4v.11C7 5.33 7.67 6 8.5 6zM5 20v-8h6v8zm8 0h6v-8h-6z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            New to Netflix? Try 14 days for ₹0.
+        </div>
+
+    </header>
+    <main>
+        <div class="main-background">
+            <div class="banner2">
+                <img class="img_1" src="netflix-logo-png-2562 1.png" alt="logo">
+                <div class="banner2_inside">
+
+                    <div class="language">
+                        <img src="language-svgrepo-com.svg" class="lang_icon">
+
+                        <select>
+                            <option>English</option>
+                            <option>Hindi</option>
+                        </select>
+
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <button class="button1">Sign In</button>
+
+                </div>
+            </div>
+            <section class="main_heading">
+                <div class="headings">
+                    <h1>Unlimited movies, shows, and more</h1>
+                    <h2 class="first_h2">Plans start at ₹149. Cancel anytime.</h2>
+                    <p class="first_p">Ready to watch? Enter your email to start your membership.</p>
+                    <div class="email">
+                        <form action="login" method="post">
+                            <label for="E-mail Id"></label>
+                            <input type="text" id="E-mail Id" name="mail" placeholder="Email address">
+                        </form>
+                        <button>Try 14 Days for $0 ></button>
+                    </div>
+                    <p class="last_p">New members only. Terms below.</p>
+                </div>
+            </section>
+        </div>
+        <h2 class="second_h2">Trending Now</h2>
+        <section class="container_1">
+            <div class="box box1">
+                <div class="outlined_number">1</div><img src="Rectangle 6.png" alt="">
+            </div>
+            <div class="box box2">
+                <div class="outlined_number">2</div><img src="Rectangle 11.png" alt="">
+            </div>
+            <div class="box box3">
+                <div class="outlined_number">3</div><img src="Rectangle 8.png" alt="">
+            </div>
+            <div class="box box4">
+                <div class="outlined_number">4</div><img src="Rectangle 9.png" alt="">
+            </div>
+            <div class="box box5">
+                <div class="outlined_number">5</div><img src="Rectangle 7.png" alt="">
+            </div>
+            <div class="box box6">
+                <div class="outlined_number">6</div><img src="" alt="">
+            </div>
+            <button class="box_button">></button>
+        </section>
+        <h2 class="third_h2">More reaseons to join</h2>
+        <section class="container_2">
+            <div class="flexes flexes1">
+                <h3 class="container_2_h3">Enjoy on your TV</h3>
+                <p class="container_2_p">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players
+                    and more.</p>
+                <img src="tv.svg" alt="">
+            </div>
+            <div class="flexes flexes2">
+                <h3 class="container_2_h3">Download your shows to watch offline</h3>
+                <p class="container_2_p">Save your favourites easily and always have something to watch.</p>
+                <img src="download.svg" alt="">
+            </div>
+            <div class="flexes flexes3">
+                <h3 class="container_2_h3">Watch everywhere</h3>
+                <p class="container_2_p">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                <img src="mic.svg" alt="">
+            </div>
+            <div class="flexes flexes4">
+                <h3 class="container_2_h3">Create profiles for kids</h3>
+                <p class="container_2_p">Send kids on adventures with their favourite characters in a space made just
+                    for them — free with
+                    your membership.</p>
+                <img src="kids.svg" alt="kids logo">
+            </div>
+        </section>
+        <h2 class="forth_h2">Frequently Asked Questions</h2>
+        <section class="container_3">
+            <button class="grids grid1"><strong>What is Netflix?</strong> <img width="48px" height="36px"
+                    src="plus-svgrepo-com.svg" alt="plus"></button>
+            <button class="grids grid1"><strong>How much does Netflix cost?</strong> <img width="48px" height="36px"
+                    src="plus-svgrepo-com.svg" alt="plus"></button>
+            <button class="grids grid1"><strong> can I watch?</strong> <img width="48px" height="36px"
+                    src="plus-svgrepo-com.svg" alt="plus"></button>
+            <button class="grids grid1"><strong> do I cancel?</strong> <img width="48px" height="36px"
+                    src="plus-svgrepo-com.svg" alt="plus"></button>
+            <button class="grids grid1"><strong>What can I watch on Netflix?</strong> <img width="48px" height="36px"
+                    src="plus-svgrepo-com.svg" alt="plus"></button>
+            <button class="grids grid1"><strong>Is Netflix good for kids?</strong> <img width="48px" height="36px"
+                    src="plus-svgrepo-com.svg" alt="plus"></button>
+        </section>
+    </main>
+    <footer>
+        <h3 class="first_h3">Ready to watch? Enter your email to start your membership.</h3>
+        <section class="container_4">
+            <form action="login" method="post">
+                <label for="E-mail Id"></label>
+                <input type="text" id="E-mail Id" name="mail" placeholder="Email address">
+            </form>
+            <button>Try 14 Days for $0 ></button>
+        </section>
+        <article>
+            <p class="one">This offer is only valid for new members. This offer is non-transferrable. You agree that
+                Netflix will
+                charge the membership fee at the end of the free trial to your payment method and will automatically
+                continue your membership until you cancel. Some methods of payment may not be eligible to redeem this
+                offer.</p>
+            <p class="two">Questions? Call 000-800-919-1743</p>
+        </article>
+        <section class="container_last">
+            <div class="gridss grids1"><a href="">FAQ</a></div>
+            <div class="gridss grids2"><a href="">Investor Relations</a></div>
+            <div class="gridss grids3"><a href="">Privacy</a></div>
+            <div class="gridss grids4"><a href="">Speed Test</a></div>
+            <div class="gridss grids5"><a href="">Help Centre</a></div>
+            <div class="gridss grids6"><a href="">Jobs</a></div>
+            <div class="gridss grids7"><a href="">Cookie Preferences</a></div>
+            <div class="gridss grids8"><a href="">Legal Notices</a></div>
+            <div class="gridss grids9"><a href="">Account</a></div>
+            <div class="gridss grids10"><a href="">Ways to Watch</a></div>
+            <div class="gridss grids11"><a href="">Corporate Information</a></div>
+            <div class="gridss grids12"><a href="">Only on Netflix</a></div>
+            <div class="gridss grids13"><a href="">Media Centre</a></div>
+            <div class="gridss grids14"><a href="">Terms of Use</a></div>
+            <div class="gridss grids15"><a href="">Contact Us</a></div>
+
+        </section>
+        <div class="last-div">
+            <div class="language">
+                <img src="language-svgrepo-com.svg" class="lang_icon">
+
+                <select>
+                    <option>English</option>
+                    <option>Hindi</option>
+                </select>
+
+                <span class="arrow">▼</span>
+            </div>
+            <strong>
+                <p class="second_last_p">Netflix India</p>
+            </strong>
+            <p class="last_p">This page is protected by Google reCAPTCHA to ensure you're not a bot</p>
+        </div>
+    </footer>
+</body>
+
+</html>

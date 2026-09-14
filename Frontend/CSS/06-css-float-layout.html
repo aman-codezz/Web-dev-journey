@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            border: 2px solid black;
+            text-align: center;
+        }
+        ol li{
+            color: red;
+            text-align: center;
+            display: inline-block;
+            width: 23vw;
+            height: 10vh;
+            padding-top:20px ;
+        }
+        .image{
+            border: 2px solid black;
+            width: 50vw;
+            height: 50vh;
+            float: left;
+        }
+        div img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ol>
+                <li>home</li>
+                <li>more</li>
+                <li>contact</li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <div class="image">
+            <img src="blackout.jpg.jpg" alt="image">
+        </div>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ipsa nesciunt ullam voluptates impedit
+            eius laudantium quae facere asperiores cumque, nemo illum quod ut at, rerum minus optio nobis corporis harum
+            earum possimus dolore quos ratione. Iusto ducimus perspiciatis ea culpa hic a cum est cumque rem dolorem
+            quidem maiores voluptatum aliquam nemo illo, tempora saepe nisi! Consectetur provident, hic saepe
+            praesentium repudiandae officia? A ab nobis nihil enim inventore fuga nulla alias! Itaque, aut facilis
+            accusantium iure perspiciatis perferendis autem unde provident culpa consequatur quis. Rerum quidem, debitis
+            commodi vitae magnam corrupti consectetur, laboriosam provident velit nulla laborum dolorum!
+        </div>
+    </main>
+</body>
+
+</html>

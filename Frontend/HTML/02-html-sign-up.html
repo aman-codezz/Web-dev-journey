@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta "description" content="this website contains sign up page for our company">
+    <title>sign up</title>
+    <style>
+        body {
+            background: rgb(1, 0, 0) url("blackout.jpg.jpg") repeat-x left;
+             
+        }
+        
+        .nav{
+            display: inline-block;
+            list-style-position: inside;
+            color: grey;
+        }
+        .oneoone {
+            letter-spacing: 10px;
+            text-align: center;
+            margin: 50px;
+        }
+
+        section {
+            display: inline-block;
+            box-shadow: 10px 10px 12px #625c5c;
+            background-color: #160c0c65;
+            border: 2px solid black ;
+            border-radius: 8px;
+            width: 50vw;
+            margin: auto;
+            height: auto;
+        }
+
+        .one {
+            text-shadow: 3px 3px 7px;
+            padding: 10px 15px 10px 5px;
+            font-size: 3em;
+            color: rgba(135, 133, 133, 0.728);
+        }
+        .roundone, .roundthree, .roundfive{
+            color: rgba(135, 133, 133, 0.728);
+            font-size: 1.3em;
+            text-shadow: 2px 2px 3px #625c5c;
+        }
+        .roundtwo, .roundfour, .roundsix{
+             box-shadow: 4px 4px 5px #625c5c;
+            color: rgba(135, 133, 133, 0.728);
+            background-color: rgb(52, 40, 40);
+            border: 2px solid rgba(5, 5, 5, 0.893);
+            width: 19vw;
+            border-radius: 8px;
+            font-size: 4vmin;
+        }
+
+        .two {
+            text-align: center;
+            padding: 0px 0px 15px 0px;
+
+        }
+
+        .three {
+            text-align: center;
+            padding: 0px 26px 15px 0px;
+        }
+
+        .four {
+            text-align: center;
+            padding: 0px 91px 15px 0px;
+            margin: 0px 0px 15px 0px;
+        }
+        .five {
+           background-color:rgb(52, 40, 40);
+           border: 2px solid black;
+           border-radius: 8px ;
+           width: 10vw;
+           margin: auto;
+           box-shadow: 5px 5px 5px #625c5c;
+           margin-bottom: 15px;
+        }
+
+        .six {
+            margin: 60px;
+        }
+
+        .six_one, .six_two {
+            color: rgba(135, 133, 133, 0.728);
+            background: rgba(52, 40, 40, 0.421);
+            padding: 3vmin;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px #625c5c;
+        }
+
+        a:hover {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="oneoone">
+            <img height="100px" width="200px" src="logo.svg" alt="logo">
+            <h4 style="color: rgba(1, 1, 2, 0.663);">WECLCOME TO THE SIGN UP PAGE </h4>
+                <ul class = "nav"type="square">
+                <li>Home</li>
+                <li>More</li>
+                <li>features</li>
+                <li>FAQ</li>
+            </ul>
+        </nav>
+        <section>
+            <h1 class="one" style=text-align:center;>SIGNUP</h1>
+            <div>
+                <form action="signup" method="post">
+                    <div class="two">
+                        <label class="roundone" for "email"> Email : </label>
+                        <input class="roundtwo" type="text" id="email" name="email" placeholder="enter email"><br>
+                    </div>
+                    <div class="three">
+                        <label class="roundthree" for "pass"> Password : </label>
+                        <input class="roundfour" type="password" id="pass" name="password" placeholder="enter password">
+                    </div>
+                    <div class="four">
+                        <label class="roundfive" for "pass"> Confirm Password : </label>
+                        <input class="roundsix" type="password" id="pass" name="password"
+                            placeholder="enter confirm password">
+                    </div>
+            </div>
+            <div class="five" style="text-align: center;">
+                <a style = "color:rgba(135, 133, 133, 0.728); font-weight: 700;"href="01-html-sign-in.html">SIGNUP</a>
+
+            </div>
+            </form>
+        </section>
+        <footer class="six" style="text-align: center;">
+            <a class="six_one" href="link">ABOUT US</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="six_two" href="link">COPY RIGHT &copy;</a>
+        </footer>
+        </main>
+</body>
+
+</html>

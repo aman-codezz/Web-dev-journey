@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple layout website</title>
+    <style>
+       *{
+        margin: 0;
+        padding:0;
+       }
+       header{
+        border: 2px solid rgb(84, 79, 79);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: aquamarine;
+        height: 10vh;
+        position:sticky;
+        top: 1px;
+       }
+       nav li{
+           text-align: center;
+           display: inline-block;
+           width: 30%;
+           margin-top: 12px;
+        }
+        section{
+         border-radius: 10px;  
+        text-align: center;
+        border: 2px solid black;
+        background-color: peru;
+        height: 50vh;
+        box-shadow: 0px 5px 2px;
+       }
+       section div:first-child{
+        border-radius: 10px;
+        margin-top: 40px;
+        margin-right: 40px;
+        border: 2px solid black;
+        display: inline-block;
+        height: 65%;
+        width: 40%;
+        background-color: antiquewhite;
+       }
+       section div:nth-child(2){
+        background-color: antiquewhite;
+        border-radius: 10px;
+        border: 2px solid black;
+        display: inline-block;
+        height:65%;
+        width:40%;
+       }
+       article{
+        background-color: brown;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 30px;
+        padding: 20px;
+        box-shadow: -5px -5px 2px ;
+        box-shadow: 5px 5px 2px ;
+       }
+       img{
+        width: 30px;
+        height: 30px;
+        position:fixed;
+        bottom: 50px;
+        right: 0px;
+        clear: both;
+       }
+       footer{
+       border: 2px solid rgb(84, 79, 79);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: aquamarine;
+        position:sticky;
+        text-align: center;
+        padding: 10px;
+       }
+       footer ul li{
+        display: inline-block;
+        width: 30% ;
+        text-overflow:clip; 
+
+       }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="box1">hey this is first box</div>
+            <div class="box2">hey this is second box</div>
+        </section>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum impedit id distinctio. Culpa, in
+                asperiores voluptates hic suscipit nesciunt explicabo facere, harum consectetur blanditiis sint atque
+                amet vitae sunt. Dolor.</p>
+        </article>
+        <img src="buisness_logo.jpg" alt="Logo">
+    </main>
+    <footer>
+        <ul>
+            <li>More</li>
+            <li>E-mail</li>
+            <li>Number</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

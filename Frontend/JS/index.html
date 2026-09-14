@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuction which add cards automatically</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            cursor: pointer;
+        }
+        .btn2{
+            cursor: pointer;
+        }
+
+        /* ===== Desktop ==== */
+        .cards {
+            height: 20vh;
+            width: 80vw;
+            margin: 10px;
+            background-color: #0f0f0f;
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+
+        .cards .img-wrapper {
+            height: 85%;
+            width: 15%;
+            margin: 10px 10px 10px 20px;
+            position: relative;
+
+        }
+
+        .image {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .duration {
+            margin: 10px 20px;
+            font-size: 0.8rem;
+            color: white;
+            position: absolute;
+            bottom: -3px;
+            font-weight: 900;
+            right: -15px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.652);
+            padding: 2px 5px 2px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: row wrap;
+            color: white;
+            height: 30px;
+            font-weight: 800;
+            flex-grow: 1;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-self: flex-start;
+        }
+
+        .extra-info {
+            margin-top: -10px;
+            display: flex;
+            gap: 23px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: grey;
+            font-weight: 100;
+
+        }
+
+        /* ===== Tablet ===== */
+        @media (max-width: 768px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .cards {
+                width: 92vw;
+                height: 16vh;
+                margin: 8px;
+            }
+
+            .cards .img-wrapper {
+                width: 22%;
+                height: 80%;
+                margin: 10px 10px 10px 15px;
+            }
+
+            h3 {
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+
+            .extra-info {
+                gap: 12px;
+                font-size: 0.85rem;
+            }
+
+            .duration {
+                font-size: 0.7rem;
+                margin: 5px 10px;
+                right: -8px;
+                bottom: -2px;
+            }
+        }
+
+
+        /* ===== Mobile ===== */
+        @media (max-width: 480px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .cards {
+                width: 95vw;
+                height: 110px;
+                margin: 6px;
+            }
+
+            .cards .img-wrapper {
+                width: 34%;
+                height: 80%;
+                margin: 10px 8px 10px 10px;
+            }
+
+            h3 {
+                font-size: 0.85rem;
+                height: auto;
+                margin-top: 10px;
+            }
+
+            .information {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .extra-info {
+                gap: 8px;
+                font-size: 0.7rem;
+                margin-top: -5px;
+            }
+
+            .duration {
+                font-size: 0.65rem;
+                margin: 3px 5px;
+                right: -5px;
+                bottom: -2px;
+                padding: 2px 4px;
+            }
+
+            .image img {
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <button class="btn">NEW CARD</button>
+
+    <div class="card">
+        <h2>Samsung</h2>
+        <button class="btn2">Buy</button>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

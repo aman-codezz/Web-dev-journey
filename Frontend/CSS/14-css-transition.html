@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .button{
+            border: none;
+            font-weight:lighter;
+            padding: 6px;
+            border-radius: 4px;
+            transition: all 100Ms ease-out 1ms;
+            cursor:pointer;
+        }
+        .button:active{
+            background-color: rgb(126, 83, 83);
+            /* border: 0.5px solid black; */
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="button"></button>
+    
+</body>
+</html>
