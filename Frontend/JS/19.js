@@ -1,0 +1,1 @@
+console.log("Error handling in async/await");
