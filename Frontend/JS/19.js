@@ -1,1 +1,2 @@
-console.log("Error handling in async/await");
+let container = document.querySelector(".container")
+container.firstElementChild()
