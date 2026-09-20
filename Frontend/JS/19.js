@@ -1,2 +1,2 @@
 let container = document.querySelector(".container")
-container.firstElementChild()
+container.style.backgroundColor = "red"
