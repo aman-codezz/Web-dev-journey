@@ -1,1 +1,2 @@
-console.log("Hello World")
+let container = document.querySelector(".container")
+container.style.backgroundColor= "red"
