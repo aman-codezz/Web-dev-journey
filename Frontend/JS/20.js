@@ -1,2 +1,7 @@
 let container = document.querySelector(".container")
-container.style.backgroundColor= "red"
+function main(){
+    setInterval(() => {
+        container.style.backgroundColor="green"
+    }, 2000);
+}
+main()
