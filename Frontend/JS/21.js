@@ -1,9 +1,10 @@
-function array(arr, cb) {
-    // arr = []
-    return cb(arr)
+function array(arr,cb) {
+    let newArry = cb(arr)
+    return newArry
 }
 let result = array([6,2,3,4,5], function(item) {
     let square = item.map((val, index, arry) => { return val ** 2 })
-    return square
+    let double = item.map((val, index, arry) => { return val * 2 })
+    return [square, double]
 })
 console.log(result)
