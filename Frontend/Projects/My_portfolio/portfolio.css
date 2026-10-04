@@ -1,55 +1,131 @@
-*{
+* {
     margin: 0;
     /* padding: 0; */
 }
-:root{
-    
+
+:root {
+    --background-color: linear-gradient(to right,
+            #6366F1 0%,
+            #06B6D4 100%);
 }
-header nav, ul{
+body{
+    background-color: #0B0F19;
+}
+
+header nav,
+ul {
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
-nav{
-    border: 2px solid black;
+
+nav {
+    border: 1px solid grey;
     border-radius: 40px;
     margin: 1.5vw 4vw 2vw 4vw;
-    padding: 1.5vw;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    font-family: 'Inter';
 }
-nav .icons{
+
+nav .icons {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
-nav .icon{
+
+nav .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: larger;
+    font-size: medium;
     font-weight: 700;
-    border: 1px solid black;
-    border-radius: 13px;
-    height: 40px;
-    width: 40px;
-    /* background: linear-gradient(to right, 0&); */
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    background:var(--background-color);
 }
-.avaibility ul{
+
+.avaibility ul {
     border: 1px solid rgb(4, 238, 4);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 2px 8px 2px 28px;
-    font-size: medium;
-    margin-left: 10px; 
+    padding: 2px 8px 2px 25px;
+    /* margin-right: 220px; */
+    font-size: 10px;
     color: rgb(4, 238, 4);
     font-weight: bold;
-    background-color: rgba(4, 192, 54, 0.149);
+    background-color: rgba(1, 49, 14, 0.149);
 }
-.avaibility ul ::marker{
-    /* font-size: large; */
-    position:relative;
-    right: 100px;
+
+.nav_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: grey;
+    font-weight: 400;
+}
+
+.nav_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    transition: transform 5ms ease-out 1ms;
+}
+
+.toggle:active {
+    transform: scale(1.1);
+
+}
+
+.toggle img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact {
+    border-radius: 40px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: transform 5ms ease-out 1ms;
+    background: var(--background-color);
+}
+
+.contact:active {
+    transform: scale(1.01);
+}
+
+.contact a {
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: semi-bold;
+    background-color: linear-gradient(to right,
+            red 10%,
+            orange 20%,
+            yellow 30%);
 }
