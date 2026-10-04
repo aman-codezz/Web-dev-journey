@@ -21,11 +21,12 @@ ul {
 }
 
 nav {
-    border: 1px solid grey;
+    border: 0.5px solid rgba(128, 128, 128, 0.195);
     border-radius: 40px;
     margin: 1.5vw 4vw 2vw 4vw;
     padding: 0.5vw 1vw 0.5vw 1vw;
     font-family: 'Inter';
+    background-color: #111827;
 }
 
 nav .icons {
@@ -49,7 +50,8 @@ nav .icon {
 }
 
 .avaibility ul {
-    border: 1px solid rgb(4, 238, 4);
+    /* border: 0.5px solid rgb(4, 238, 4); */
+    outline: 0.1px solid #10b98176;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -58,7 +60,7 @@ nav .icon {
     padding: 2px 8px 2px 25px;
     /* margin-right: 220px; */
     font-size: 10px;
-    color: rgb(4, 238, 4);
+    color: #10B981;
     font-weight: bold;
     background-color: rgba(1, 49, 14, 0.149);
 }
@@ -82,15 +84,15 @@ nav .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .toggle {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    height: 22px;
+    width: 32px;
     transition: transform 5ms ease-out 1ms;
 }
 
