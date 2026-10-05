@@ -11,6 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,15 +42,43 @@
     <main>
         <section class="hero">
             <div class="intro">
-                <h4><img src="">Building Next-Gen Interactive Web Experience</h4>
+                <h4>🚀 Building Next-Gen Interactive Web Experiences</h4>
                 <h1>Frontend Developer Crafting High-Performance SaaS Interfaces.</h1>
                 <p>Specializing in clean JavaScript architecture, moder UI, and accessible web systems built for speed.
                 </p>
-                <button class="work">Explore Selected Work <img src=""></button>
-                <button class="github"><img src="">View Github</button>
+                <div class="work_github">
+                    <button class="work">Explore Selected Work <img src="Assets/arrow_img.svg"></button>
+                    <button class="github"><img src="Assets/github_img.svg">View Github</button>
+                </div>
             </div>
-            <div class="screen_shot">
-                <img src="" alt="" srcset="">
+            <div class="mac_disp">
+                <div class="nav">
+                    <div class="dots">
+                        <div class="dot1"></div>
+                        <div class="dot2"></div>
+                        <div class="dot3"></div>
+                    </div>
+                    <strong class="file_name">fetchData.js</strong>
+                    <button class="cpy_btn"><img src="Assets/copy.svg" alt="copy button"></button>
+                </div>
+                <pre>
+                <ol type="1">
+                    <li class="line1 line">function fetchData(endpoint) {</li>
+                    <li class="line2 line">  return fetch(`https://api.example.com/${endpoint}`)</li>
+                    <li class="line3 line">    .then((response) => {</li>
+                    <li class="line4 line">      if (!response.ok) {</li>
+                    <li class="line5 line">        throw new Error(`Status: ${response.status}`);</li>
+                    <li class="line6 line">      }</li>
+                    <li class="line7 line">      return response.json();</li>
+                    <li class="line8 line">    })</li>
+                    <li class="line9 line">    .then((data) => {</li>
+                    <li class="line10 line">      return { success: true, payload: data };</li>
+                    <li class="line11 line">    })</li>
+                    <li class="line12 line">    .catch((error) => {</li>
+                    <li class="line13 line">      return { success: false, message: error.message };</li>
+                    <li class="line14 line">    });}</li>
+                </ol>
+                </pre>
             </div>
         </section>
         <div class="lang">
