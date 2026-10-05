@@ -109,6 +109,11 @@ nav .icon {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: all 200ms ease-in-out 1ms;
+}
+.toggle img:active {
+    transform: rotate(90deg);
+    transform-origin: center;
 }
 
 .contact {
@@ -298,7 +303,7 @@ nav .icon {
 }
 
 .nav .cpy_btn:active {
-    transform: scale(1.03);
+    transform: scale(1.08);
 }
 
 .nav .cpy_btn img {
