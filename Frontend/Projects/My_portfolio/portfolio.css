@@ -443,7 +443,7 @@ nav .icon {
     font-size: 11px;
 }
 
-.graph .main_graph .disc .one p{
+.graph .main_graph .disc .one p {
     color: var(--sc_color);
     font-family: 'Outfit';
     font-weight: bold;
@@ -457,22 +457,33 @@ nav .icon {
     font-size: 18px;
 }
 
+/* 1. On .scandal: Change display to flex */
 .graph .main_graph .scandal {
-    list-style-type: hide;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    /* 👈 Change from 'grid' to 'flex' */
+    align-items: flex-end;
+    /* 👈 Keeps all bars on the bottom floor */
     gap: 0.5rem;
-    align-items: end;
-    justify-self: center;
-    list-style-type: none;
     height: 8rem;
+    /* 👈 Parent height */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-.graph .main_graph .scandal li{
+
+/* 2. On the li: Tell each bar to share the width equally */
+.graph .main_graph .scandal li {
+    flex: 1;
+    /* 👈 Each bar takes equal horizontal width */
     background-color: #06B6D4;
-    border-radius:4px 4px 0px 0px ;
+    border-radius: 4px 4px 0px 0px;
     height: 0px;
-    transition: all 1s ease;
+    transition: height 1s ease;
+}
+
+
+.graph .main_graph .scandal li:hover {
+    filter: brightness(1.2);
 }
 
 .component_arch {
