@@ -492,6 +492,26 @@ nav .icon {
     padding: 2rem;
     background-color: #111827;
 }
+.component_arch h2{
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0.4rem;
+    color: var(--sc_color)
+}
+.component_arch p{
+    font-family: 'Inter';
+    font-weight: regular;
+    font-size: 14px;
+    color: var(--color);
+    padding-bottom: 1.5rem;
+}
+.component_arch .comp_data{
+    text-indent: 0.8rem;
+    line-height: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
 
 .perf_mtrc {
     border: 1px solid var(--border-color);
