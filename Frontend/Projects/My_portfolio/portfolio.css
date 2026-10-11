@@ -489,7 +489,7 @@ nav .icon {
 .component_arch {
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    padding: 2rem;
+    /* padding: 2rem; */
     background-color: #111827;
 }
 .component_arch h2{
@@ -497,20 +497,37 @@ nav .icon {
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 0.4rem;
-    color: var(--sc_color)
+    color: var(--sc_color);
+    padding: 2rem 2rem 0rem 2rem;
 }
 .component_arch p{
     font-family: 'Inter';
     font-weight: regular;
     font-size: 14px;
     color: var(--color);
-    padding-bottom: 1.5rem;
+    padding: 0rem 2rem 1.5rem 2rem;
 }
 .component_arch .comp_data{
+    margin-top:1rem;
     text-indent: 0.8rem;
-    line-height: 2rem;
     display: flex;
     flex-flow: column nowrap;
+    row-gap: 0.75rem;
+    padding-left: 2rem;
+}
+.component_arch .comp_data div{
+    font-family: 'Inter';
+    font-weight: regular;
+    font-size: 13px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.component_arch .comp_data .chart-network {
+    padding-left:1rem ;
+}
+.component_arch .comp_data .atom-wht{
+    padding-left:2rem ;
 }
 
 .perf_mtrc {
