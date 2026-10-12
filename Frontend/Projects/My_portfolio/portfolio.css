@@ -11,6 +11,7 @@
     --margin: 7vw 4vw 7vw 4vw;
     --color: #9CA3AF;
     --sc_color: white;
+    --bg-color2 : #0F172A;
 }
 
 body {
@@ -431,6 +432,7 @@ nav .icon {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 1rem;
+    background-color: var(--bg-color2);
 }
 
 .graph .main_graph .disc {
