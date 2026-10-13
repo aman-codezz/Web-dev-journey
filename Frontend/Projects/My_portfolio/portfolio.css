@@ -11,7 +11,7 @@
     --margin: 7vw 4vw 7vw 4vw;
     --color: #9CA3AF;
     --sc_color: white;
-    --bg-color2 : #0F172A;
+    --bg-color2: #0F172A;
 }
 
 body {
@@ -494,7 +494,8 @@ nav .icon {
     /* padding: 2rem; */
     background-color: #111827;
 }
-.component_arch h2{
+
+.component_arch h2 {
     font-family: 'Outfit';
     font-weight: bold;
     font-size: 22px;
@@ -502,22 +503,25 @@ nav .icon {
     color: var(--sc_color);
     padding: 2rem 2rem 0rem 2rem;
 }
-.component_arch p{
+
+.component_arch p {
     font-family: 'Inter';
     font-weight: regular;
     font-size: 14px;
     color: var(--color);
     padding: 0rem 2rem 1.5rem 2rem;
 }
-.component_arch .comp_data{
-    margin-top:1rem;
+
+.component_arch .comp_data {
+    margin-top: 1rem;
     text-indent: 0.8rem;
     display: flex;
     flex-flow: column nowrap;
     row-gap: 0.75rem;
     padding-left: 2rem;
 }
-.component_arch .comp_data div{
+
+.component_arch .comp_data div {
     font-family: 'Inter';
     font-weight: regular;
     font-size: 13px;
@@ -525,11 +529,13 @@ nav .icon {
     flex-flow: row wrap;
     align-items: center;
 }
+
 .component_arch .comp_data .chart-network {
-    padding-left:1rem ;
+    padding-left: 1rem;
 }
-.component_arch .comp_data .atom-wht{
-    padding-left:2rem ;
+
+.component_arch .comp_data .atom-wht {
+    padding-left: 2rem;
 }
 
 .perf_mtrc {
@@ -539,10 +545,110 @@ nav .icon {
     background-color: #111827;
 }
 
+.perf_mtrc h2 {
+    color: var(--sc_color);
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+}
+
+.perf_mtrc p {
+    font-family: 'Inter';
+    font-weight: regular;
+    font-size: 14px;
+    color: var(--color);
+}
+
 .design_syst {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 2rem;
     background-color: #111827;
     grid-column: 2/4;
+}
+
+.design_syst h2 {
+    color: var(--sc_color);
+    font-family: 'Outfit';
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+}
+
+.design_syst p {
+    font-family: 'Inter';
+    font-weight: regular;
+    font-size: 14px;
+    color: var(--color);
+    margin-bottom: 1.5rem;
+}
+
+.design_syst .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.design_syst .container .boxes {
+    height: 2.1rem;
+    width: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.design_syst .container .box1 {
+    background-color: #0B0F19;
+}
+
+.design_syst .container .box2 {
+    background-color: #111827;
+}
+
+.design_syst .container .box3 {
+    background-color: #6366F1;
+}
+
+.design_syst .container .box4 {
+    background-color: #06B6D4;
+}
+
+.design_syst .container .inside_cntr {
+    margin-left: 1rem;
+}
+
+.design_syst .container .inside_cntr strong {
+    font-family: 'Outfit';
+    font-weight: semi-bold;
+    font-size: 14px;
+}
+
+.design_syst .container .inside_cntr p {
+    margin-bottom: 0px;
+    font-family: 'Inter';
+    font-size: 12px;
+    color: var(--color);
+}
+
+.thrd_page {
+    margin: var(--margin);
+}
+
+.thrd_page .eyebrow {
+    font-family: 'Inter';
+    font-weight: semi-bold;
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    color: #6365f1;
+    display: inline-block;
+    background-color: #6365f10e;
+    margin-bottom: 0.75rem;
+}
+.thrd_page h1{
+    font-family: 'Outfit';
+    font-weight: extra-bold;
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
 }
