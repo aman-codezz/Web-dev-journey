@@ -38,14 +38,13 @@ let github_data = async function () {
   let today = new Date();
   pushEvent.forEach(event => {
     var eventDate = new Date(event.created_at)
-    // console.log(today)
-    // console.log(eventDate)
-    // var difference= today - eventDate
-    // var daysAgo = difference / (1000 * 60 * 60 *24)
-    // if(daysAgo >=0 && daysAgo < 7){
-    //   console.log(Math.floor(daysAgo)+ " Day" )
-    // }
-     console.log(event.payload.commits?.length)
+    console.log(today)
+    console.log(eventDate)
+    var difference= today - eventDate
+    var daysAgo = difference / (1000 * 60 * 60 *24)
+    if(daysAgo >=0 && daysAgo < 7){
+      console.log(Math.floor(daysAgo)+ " Day" )
+    }
   });
 }
 github_data()
