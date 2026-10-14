@@ -12,6 +12,7 @@
     --color: #9CA3AF;
     --sc_color: white;
     --bg-color2: #0F172A;
+    --inside_card_margin :1.5rem;
 }
 
 body {
@@ -651,4 +652,78 @@ nav .icon {
     font-weight: extra-bold;
     font-size: 2.25rem;
     margin-bottom: 3rem;
+}
+.thrd_page .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items:start;
+    align-items: center;
+    gap: 1rem;
+}
+.thrd_page .card1{
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    background-color:var(--bg-color2) ;
+}
+.thrd_page .card1 .img{
+    width: 30vw;
+    height: 35vh;
+}
+.thrd_page .card1 .img img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.thrd_page .card1 .inside_card{
+    margin: var(--inside_card_margin);
+}
+.thrd_page .card1 .inside_card h2{
+    font-family: 'Outfit';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.thrd_page .card1 .inside_card .below_img_tags{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.thrd_page .card1 .inside_card .below_img_tags .tags{
+    font-family: 'Inter';
+    font-size: 11px;
+    color: var(--color);
+    border-radius:10px ;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    background-color:#9ca3af19; 
+}
+.thrd_page .card1 .inside_card p{
+    font-family: 'Inter';
+    font-size: 14px;
+    color: var(--color);
+    margin-bottom: 1rem;
+}
+.thrd_page .card1 .inside_card button{
+    padding-left: 0px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Inter';
+    font-weight: semi-bold;
+    font-size: 14px;
+    color: #06B6D4;
+    background-color: var(--bg-color2);
+    transition: transform 100ms ease 1ms;
+    img{
+        margin-left: 0.25rem;
+    }
+}
+.thrd_page .card1 .inside_card button:active{
+    transform: scale(1.01);
 }
