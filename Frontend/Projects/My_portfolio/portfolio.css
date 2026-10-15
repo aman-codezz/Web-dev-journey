@@ -12,7 +12,7 @@
     --color: #9CA3AF;
     --sc_color: white;
     --bg-color2: #0F172A;
-    --inside_card_margin :1.5rem;
+    --inside_card_margin: 1.5rem;
 }
 
 body {
@@ -647,67 +647,78 @@ nav .icon {
     background-color: #6365f10e;
     margin-bottom: 0.75rem;
 }
-.thrd_page h1{
+
+.thrd_page h1 {
     font-family: 'Outfit';
     font-weight: extra-bold;
     font-size: 2.25rem;
     margin-bottom: 3rem;
 }
-.thrd_page .cards{
+
+.thrd_page .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    justify-items:start;
+    justify-items: start;
     align-items: center;
     gap: 1rem;
 }
-.thrd_page .card1{
+
+.thrd_page .card1 {
     border: 1px solid var(--border-color);
     border-radius: 15px;
-    background-color:var(--bg-color2) ;
+    background-color: var(--bg-color2);
 }
-.thrd_page .card1 .img{
+
+.thrd_page .card1 .img {
     width: 30vw;
     height: 35vh;
 }
-.thrd_page .card1 .img img{
+
+.thrd_page .card1 .img img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.thrd_page .card1 .inside_card{
+
+.thrd_page .card1 .inside_card {
     margin: var(--inside_card_margin);
 }
-.thrd_page .card1 .inside_card h2{
+
+.thrd_page .card1 .inside_card h2 {
     font-family: 'Outfit';
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-.thrd_page .card1 .inside_card .below_img_tags{
+
+.thrd_page .card1 .inside_card .below_img_tags {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
-.thrd_page .card1 .inside_card .below_img_tags .tags{
+
+.thrd_page .card1 .inside_card .below_img_tags .tags {
     font-family: 'Inter';
     font-size: 11px;
     color: var(--color);
-    border-radius:10px ;
+    border-radius: 10px;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-    background-color:#9ca3af19; 
+    background-color: #9ca3af19;
 }
-.thrd_page .card1 .inside_card p{
+
+.thrd_page .card1 .inside_card p {
     font-family: 'Inter';
     font-size: 14px;
     color: var(--color);
     margin-bottom: 1rem;
 }
-.thrd_page .card1 .inside_card button{
+
+.thrd_page .card1 .inside_card button {
     padding-left: 0px;
     border: none;
     cursor: pointer;
@@ -720,10 +731,146 @@ nav .icon {
     color: #06B6D4;
     background-color: var(--bg-color2);
     transition: transform 100ms ease 1ms;
-    img{
+
+    img {
         margin-left: 0.25rem;
     }
 }
-.thrd_page .card1 .inside_card button:active{
+
+.thrd_page .card1 .inside_card button:active {
     transform: scale(1.01);
+}
+
+.forth_page {
+    margin: var(--margin);
+
+    .eyebrow {
+        font-family: 'Inter';
+        font-weight: semi-bold;
+        font-size: 12px;
+        border-radius: 15px;
+        padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+        color: #6365f1;
+        display: inline-block;
+        background-color: #6365f10e;
+        margin-bottom: 0.75rem;
+    }
+
+    h1 {
+        font-family: 'Outfit';
+        font-weight: extra-bold;
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+    }
+
+    .box_container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        .card_boxes {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            width: 17.625rem;
+            padding: 1.5rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit';
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        p {
+            font-family: 'Inter';
+            font-size: 16px;
+            color: var(--color);
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            h1 {
+                margin-bottom: 0px;
+                color: rgba(128, 128, 128, 0.161);
+                font-family: 'Outfit';
+            }
+
+
+            .img_box1,
+            .img_box2,
+            .img_box3,
+            .img_box4 {
+                height: 5vh;
+                width: 2vw;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.fifth_page {
+    margin: var(--margin);
+    display: flex;
+    justify-content: space-between;
+
+    .Aman_img {
+        height: 480px;
+        width: 100vw;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+
+    .about_right {
+        padding-left: 4rem;
+        align-self: center;
+
+        .eyebrow {
+            font-family: 'Inter';
+            font-weight: semi-bold;
+            font-size: 12px;
+            border-radius: 15px;
+            padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+            color: #6365f1;
+            display: inline-block;
+            background-color: #6365f10e;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Outfit';
+            font-weight: extra-bold;
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-family: "Inter";
+            font-size: 1rem;
+            color: var(--color);
+            padding-bottom: 2rem;
+        }
+        .expertise{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            h1{
+                margin-bottom: 0px;
+            }
+        }
+    }
 }
