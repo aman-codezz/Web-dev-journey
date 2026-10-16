@@ -827,6 +827,7 @@ nav .icon {
     .Aman_img {
         height: 480px;
         width: 100vw;
+
         img {
             height: 100%;
             width: 100%;
@@ -864,13 +865,33 @@ nav .icon {
             color: var(--color);
             padding-bottom: 2rem;
         }
-        .expertise{
+
+        .expertise {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            h1{
+
+            h1 {
                 margin-bottom: 0px;
             }
         }
+    }
+}
+
+.sixth_page {
+    margin: var(--margin);
+    text-align: center;
+    h1 {
+        font-family: 'Outfit';
+        font-weight: extra-bold;
+        font-size: 2.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        font-family: "Inter";
+        font-size: 1rem;
+        color: var(--color);
+        margin-bottom: 3rem;
     }
 }
