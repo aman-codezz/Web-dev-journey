@@ -130,6 +130,10 @@ nav .icon {
     transition: transform 50ms ease-out 1ms;
     background: var(--background-color);
     margin-right: 8px;
+    font-family: 'Inter';
+    font-weight: semibold;
+    font-size: 14px;
+    color:var(--sc_color);
 }
 
 .contact:active {
