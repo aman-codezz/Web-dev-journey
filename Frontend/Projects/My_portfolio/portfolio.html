@@ -248,13 +248,64 @@
                 configure a plan.</p>
             <div class="sixth_container">
                 <div class="email">
-                    <div class="name_input">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" class="name">
+                    <form action="query">
+                        <div class="name_input">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="name" name="name">
+                        </div>
+                        <div class="email_client">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="message">
+                            <label for="comment">Message</label>
+                            <textarea id="comment" name="comment" rows="5" cols="40"
+                                placeholder="Tell me what you're looking to build..."></textarea>
+                        </div>
+                        <button type="submit">Send message</button>
+                    </form>
+                </div>
+                <div class="extra_info">
+                    <div class="email_addrs">
+                        <img src="Assets/Email.png" alt="email_img" srcset="">
+                        <div class="address">
+                            <p class="para">Email</p>
+                            <div>mdamanan558@gmail.com.</div>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img src="Assets/location.png" alt="email_img" srcset="">
+                        <div class="specific_loc">
+                            <p class="para">Location</p>
+                            <div>India, Bareilly</div>
+                        </div>
+                    </div>
+                    <div class="sc_extra">
+                        <strong>Follow Developer Channels</strong>
+                        <div class="images">
+                            <img src="Assets/Frame.png" alt="github" srcset="">
+                            <img src="Assets/Frame (1).png" alt="linkedin" srcset="">
+                            <img src="Assets/Frame (2).png" alt="X" srcset="">
+                            <img src="Assets/Frame (3).png" alt="VS_code" srcset="">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="last">
+                <strong>Aman/dev</strong>
+                <p>&copy 2026. All rights preserved.</p>
+            </div>
+            <div class="lasts">
+                <ol>
+                    <li>Project</li>
+                    <li>Stack</li>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                </ol>
+            </div>
+        </footer>
     </main>
     <script src="portfolio.js"></script>
 </body>
