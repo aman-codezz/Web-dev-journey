@@ -62,5 +62,5 @@ button3.addEventListener('click', ()=>{
 })
 let button4 = document.querySelector(".button4")
 button4.addEventListener('click', ()=>{
-  window.open("https://github.com/aman-codezz")
+  window.open("https://vercel.com/aman-dev5")
 })
