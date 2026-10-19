@@ -101,13 +101,6 @@ nav .icon {
     cursor: pointer;
     height: 22px;
     width: 32px;
-    transition: transform 5ms ease-out 1ms;
-}
-
-.toggle:active {
-    transform: scale(1.1);
-    /* transform: rotate(45deg); */
-
 }
 
 .toggle img {
