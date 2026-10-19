@@ -48,3 +48,19 @@ let github_data = async function () {
   });
 }
 github_data()
+let button1 = document.querySelector(".button1")
+button1.addEventListener('click', ()=>{
+  window.open("https://github.com/aman-codezz")
+})
+let button2 = document.querySelector(".button2")
+button2.addEventListener('click', ()=>{
+  window.open("https://www.linkedin.com/in/mohd-aman-413a58202/?isSelfProfile=true")
+})
+let button3 = document.querySelector(".button3")
+button3.addEventListener('click', ()=>{
+  window.open("https://leetcode.com/u/amannn23/")
+})
+let button4 = document.querySelector(".button4")
+button4.addEventListener('click', ()=>{
+  window.open("https://github.com/aman-codezz")
+})
