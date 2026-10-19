@@ -668,6 +668,14 @@ nav .icon {
     gap: 1rem;
 }
 
+.thrd_page .cards .grids {
+    transition: all 300ms ease-in-out 30ms;
+}
+
+.thrd_page .cards .grids:hover {
+    transform: scale(1.1);
+}
+
 .thrd_page .card1 {
     border: 1px solid var(--border-color);
     border-radius: 15px;
@@ -778,7 +786,14 @@ nav .icon {
             border-radius: 10px;
             width: 17.625rem;
             padding: 1.5rem;
+            transition: all 300ms ease-in-out 30ms;
         }
+
+        .card_boxes:hover {
+            transform: scale(1.1);
+            background-color: var(--bg-color2);
+        }
+
 
         h2 {
             margin-bottom: 0.5rem;
@@ -913,6 +928,7 @@ nav .icon {
         padding: 2rem;
         border: 1px solid var(--border-color);
         border-radius: 10px;
+        background-color: var(--bg-color2);
     }
 
     .name_input {
@@ -1015,6 +1031,7 @@ nav .icon {
             flex-flow: row wrap;
             justify-content: flex-start;
             column-gap: 1rem;
+
             img {
                 height: 3vw;
                 width: 3vw;
@@ -1032,22 +1049,24 @@ nav .icon {
                     font-family: 'Inter';
                     font-size: 12px;
                     color: var(--color);
-                    margin-bottom: 0px ;
+                    margin-bottom: 0px;
                 }
 
                 div {
                     font-family: 'Outfit';
                     font-size: 16px;
-                    font-weight:bolderp;
+                    font-weight: bolderp;
                 }
             }
         }
-        .location{
+
+        .location {
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
             column-gap: 1rem;
             margin-bottom: 2.5rem;
+
             img {
                 height: 3vw;
                 width: 3vw;
@@ -1065,45 +1084,61 @@ nav .icon {
                     font-family: 'Inter';
                     font-size: 12px;
                     color: var(--color);
-                    margin-bottom: 0px ;
+                    margin-bottom: 0px;
                 }
 
                 div {
                     font-family: 'Outfit';
                     font-size: 16px;
-                    font-weight:bolder ;
+                    font-weight: bolder;
                 }
             }
         }
-        .sc_extra{
+
+        .sc_extra {
             display: flex;
             flex-flow: column wrap;
             justify-content: flex-start;
             align-items: flex-start;
-            strong{
+
+            strong {
                 font-family: 'Inter';
                 font-size: 14px;
                 margin-bottom: 1rem;
             }
-            .images{
+
+            .images {
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: flex-start;
                 align-items: center;
                 gap: 1rem;
-                img{
+
+                button {
+                    border: none;
+                    background-color: var(--background-color);
+                    cursor: pointer;
+                    transition: transform 200ms ease-out 1ms;
+
+                    :active {
+                        transform: scale(1.03)
+                    }
+                }
+
+                img {
                     border: 1px solid var(--border-color);
                     height: 7.5vh;
                     width: 3.5vw;
                     object-fit: cover;
                     border-radius: 15px;
-                    
+
                 }
             }
-    }
+        }
     }
 }
-footer{
+
+footer {
     padding: 3rem 4vw 3rem 4vw;
     background-color: var(--bg-color2);
     display: flex;
@@ -1112,31 +1147,41 @@ footer{
     align-items: center;
     border: 1px solid var(--border-color);
     border-left: none;
-    .last{
+
+    .last {
         display: flex;
         flex-flow: row column;
         align-items: center;
         gap: 0.75rem;
-        strong{
-            font-family:'Outfit' ;
-            font-size:18px ;
+
+        strong {
+            font-family: 'Outfit';
+            font-size: 18px;
             color: var(--color);
         }
-        p{
-            font-family:'Inter' ;
-            font-size:13px ;
+
+        p {
+            font-family: 'Inter';
+            font-size: 13px;
             color: var(--color);
         }
     }
-    .lasts ol{
+
+    .lasts ol {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
         list-style-type: none;
-        color: var(--color);
-        font-family: 'Inter';
-        font-size: 13px;
+
+        li a {
+            color: var(--color);
+            font-family: 'Inter';
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+        }
     }
+
 }
