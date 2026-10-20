@@ -4,11 +4,13 @@ theme.addEventListener('click', () => {
   if (iswhite) {
     document.body.style.background = "#0B0F19"
     document.body.style.color = "white"
+    document.body.style.backgroundImage = "radial-gradient(ellipse 50% 9% at 20% 9%, #6365f11e, transparent 80%), radial-gradient(ellipse 80% 14% at 45% 9%, #06b5d42d, transparent 80%), radial-gradient(ellipse 60% 15% at 47% 45%, #6365f12b, transparent 80%), radial-gradient(ellipse 100% 9% at 20% 72.8%, #06b5d42d, transparent 100%)"
     iswhite = false
   }
   else {
     document.body.style.background = "white"
     document.body.style.color = "black"
+
     iswhite = true
   }
 })
@@ -63,4 +65,11 @@ button3.addEventListener('click', ()=>{
 let button4 = document.querySelector(".button4")
 button4.addEventListener('click', ()=>{
   window.open("https://vercel.com/aman-dev5")
+})
+let li1 = document.querySelector(".nav_links  .one")
+li1.addEventListener('click', ()=>{
+  window.scrollTo({
+  top: 1630,
+  behavior: "smooth",
+})
 })
