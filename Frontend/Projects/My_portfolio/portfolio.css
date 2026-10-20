@@ -18,6 +18,9 @@
 body {
     background-color: #0B0F19;
     color: white;
+    background-image: radial-gradient(ellipse 50% 9% at 20% 9%, #6365f11e, transparent 80%), radial-gradient(ellipse 80% 14% at 45% 9%, #06b5d42d, transparent 80%),
+        radial-gradient(ellipse 60% 15% at 47% 45%, #6365f12b, transparent 80%),
+        radial-gradient(ellipse 100% 9% at 20% 72.8%, #06b5d42d, transparent 100%);
 }
 
 header nav,
@@ -81,7 +84,7 @@ nav .icon {
     list-style: none;
 }
 
-.nav_links li a {
+.nav_links li{
     text-decoration: none;
     font-size: 1rem;
     color: var(--color);
@@ -400,6 +403,7 @@ nav .icon {
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
     margin: var(--margin);
+    background-image: radial-gradient(circle 60% 40% at 30% 70%, #6365f11e, transparent 80%);
 }
 
 .graph {
