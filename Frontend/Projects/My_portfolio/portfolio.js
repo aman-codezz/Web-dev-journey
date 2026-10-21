@@ -14,6 +14,11 @@ theme.addEventListener('click', () => {
     iswhite = true
   }
 })
+let nav_btn = document.querySelector(".nav_btns .contact")
+let page6 = document.querySelector(".sixth_page")
+nav_btn.addEventListener('click', ()=>{
+  page6.scrollIntoView({behavior: 'smooth', block: 'center'})
+})
 
 const copyButton = document.querySelector(".cpy_btn");
 copyButton.addEventListener("click", () => {
@@ -77,25 +82,44 @@ document.querySelectorAll(".nav_links .links").forEach(e => {
   e.addEventListener('click', (events) => {
     events.preventDefault();
     const link1 = document.querySelector(".nav_links .one")
-    const page3 = document.querySelector(".thrd_page")
+    var page3 = document.querySelector(".thrd_page")
 
-    // const link2 = document.querySelector(".nav_links .two")
-    // const page3 = document.querySelector(".thrd_page")
-    
+    const link2 = document.querySelector(".nav_links .two")
+    var pageStack = document.querySelector(".lang ul")
+
     const link3 = document.querySelector(".nav_links .three")
-    const page4 = document.querySelector(".forth_page")
+    var page4 = document.querySelector(".forth_page")
 
     const link4 = document.querySelector(".nav_links .four")
-    const page5 = document.querySelector(".fifth_page")
+    var page5 = document.querySelector(".fifth_page")
 
-     if (e.classList.contains("one")) {
-      page3.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } 
+    if (e.classList.contains("one")) {
+      page3.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    else if (e.classList.contains("two")) {
+      pageStack.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
     else if (e.classList.contains("three")) {
-      page4.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } 
+      page4.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
     else if (e.classList.contains("four")) {
-      page5.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      page5.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   })
 })
+document.querySelectorAll(".lasts li").forEach(en => {
+  en.addEventListener('click', (eve) => {
+    eve.preventDefault(); // Prevents default jump behavior if these are <a> tags
+
+    // Selecting the target sections correctly for this block
+    const pageTeen = document.querySelector(".thrd_page");
+    const page1 = document.querySelector(".lang ul");
+
+    if (en.classList.contains("ek")) {
+      pageTeen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    else if (en.classList.contains("do")) {
+      page1.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+});
