@@ -36,40 +36,66 @@ let github_data = async function () {
   let data = await response.json()
   let pushEvent = data.filter((e) => (e.type === "PushEvent"))
   // console.log(pushEvent)
-  let dailyCommits = [0,0,0,0,0,0,0];
+  let dailyCommits = [0, 0, 0, 0, 0, 0, 0];
   let today = new Date();
   pushEvent.forEach(event => {
     var eventDate = new Date(event.created_at)
-    console.log(today)
-    console.log(eventDate)
-    var difference= today - eventDate
-    var daysAgo = difference / (1000 * 60 * 60 *24)
-    if(daysAgo >=0 && daysAgo < 7){
-      console.log(Math.floor(daysAgo)+ " Day" )
+    // console.log(today)
+    // console.log(eventDate)
+    var difference = today - eventDate
+    var daysAgo = difference / (1000 * 60 * 60 * 24)
+    if (daysAgo >= 0 && daysAgo < 7) {
+      // console.log(Math.floor(daysAgo)+ " Day" )
     }
   });
 }
 github_data()
 let button1 = document.querySelector(".button1")
-button1.addEventListener('click', ()=>{
+button1.addEventListener('click', () => {
   window.open("https://github.com/aman-codezz")
 })
 let button2 = document.querySelector(".button2")
-button2.addEventListener('click', ()=>{
+button2.addEventListener('click', () => {
   window.open("https://www.linkedin.com/in/mohd-aman-413a58202/?isSelfProfile=true")
 })
 let button3 = document.querySelector(".button3")
-button3.addEventListener('click', ()=>{
+button3.addEventListener('click', () => {
   window.open("https://leetcode.com/u/amannn23/")
 })
 let button4 = document.querySelector(".button4")
-button4.addEventListener('click', ()=>{
+button4.addEventListener('click', () => {
   window.open("https://vercel.com/aman-dev5")
 })
-let li1 = document.querySelector(".nav_links  .one")
-li1.addEventListener('click', ()=>{
-  window.scrollTo({
-  top: 1630,
-  behavior: "smooth",
-})
+// let li1 = document.querySelector(".nav_links  .one")
+// li1.addEventListener('click', ()=>{
+//   window.scrollTo({
+//   top: 1630,
+//   behavior: "smooth",
+// })
+// })
+document.querySelectorAll(".nav_links .links").forEach(e => {
+  e.addEventListener('click', (events) => {
+    events.preventDefault();
+    const link1 = document.querySelector(".nav_links .one")
+    const page3 = document.querySelector(".thrd_page")
+
+    // const link2 = document.querySelector(".nav_links .two")
+    // const page3 = document.querySelector(".thrd_page")
+    
+    const link3 = document.querySelector(".nav_links .three")
+    const page4 = document.querySelector(".forth_page")
+
+    const link4 = document.querySelector(".nav_links .four")
+    const page5 = document.querySelector(".fifth_page")
+
+     if (e.classList.contains("one")) {
+      page3.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
+    else if (e.classList.contains("three")) {
+      page4.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
+    else if (e.classList.contains("four")) {
+      page5.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  })
 })
