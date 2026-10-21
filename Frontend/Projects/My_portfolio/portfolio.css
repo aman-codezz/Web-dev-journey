@@ -89,6 +89,7 @@ nav .icon {
     font-size: 1rem;
     color: var(--color);
     font-weight: 400;
+    cursor: pointer;
 }
 
 .nav_btns {
@@ -1171,12 +1172,13 @@ footer {
         gap: 1.5rem;
         list-style-type: none;
 
-        li a {
+        li {
             color: var(--color);
             font-family: 'Inter';
             text-decoration: none;
             font-size: 1rem;
             font-weight: 400;
+            cursor: pointer;
         }
     }
 
