@@ -123,8 +123,10 @@
                 <p>Strict Atomic modular components documented with high test coverage.</p>
                 <div class="comp_data">
                     <div class="atom"><img src="Assets/atom.png" alt="img">Atoms (Button, Input)</div>
-                    <div class="chart-network"><img src="Assets/chart-network.png" alt="img">Molecules (FormField, Header)</div>
-                    <div class="atom-wht"><img src="Assets/atom-white.png" alt="img">Organisms (UserForm, Navigation)</div>
+                    <div class="chart-network"><img src="Assets/chart-network.png" alt="img">Molecules (FormField,
+                        Header)</div>
+                    <div class="atom-wht"><img src="Assets/atom-white.png" alt="img">Organisms (UserForm, Navigation)
+                    </div>
                 </div>
             </div>
             <div class="perf_mtrc">
@@ -249,10 +251,10 @@
                 configure a plan.</p>
             <div class="sixth_container">
                 <div class="email">
-                    <form action="query">
+                    <form method="post" class="form">
                         <div class="name_input">
                             <label for="name">Name</label>
-                            <input type="text" id="name" class="name" name="name">
+                            <input type="text" id="name" class="name" name="name" required>
                         </div>
                         <div class="email_client">
                             <label for="email">Email</label>
@@ -260,11 +262,12 @@
                         </div>
                         <div class="message">
                             <label for="comment">Message</label>
-                            <textarea id="comment" name="comment" rows="5" cols="40"
+                            <textarea id="comment" name="comment" rows="5" cols="40" required
                                 placeholder="Tell me what you're looking to build..."></textarea>
                         </div>
                         <button type="submit">Send message</button>
                     </form>
+                    <p class="status show" >Message sent successfully.</p>
                 </div>
                 <div class="extra_info">
                     <div class="email_addrs">
