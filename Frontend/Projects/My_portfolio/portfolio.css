@@ -84,7 +84,7 @@ nav .icon {
     list-style: none;
 }
 
-.nav_links li{
+.nav_links li {
     text-decoration: none;
     font-size: 1rem;
     color: var(--color);
@@ -923,10 +923,26 @@ nav .icon {
     }
 
     .email {
+        position: relative;
         padding: 2rem;
         border: 1px solid var(--border-color);
         border-radius: 10px;
         background-color: var(--bg-color2);
+    }
+
+    .status {
+        display: none;
+        z-index: 1;
+        opacity: 0;
+        position: absolute;
+        top: 42%;
+        left: 33%;
+        margin: 0px;
+        transition: opacity 1s ease 50ms;
+        border: 1px solid var(--border-color);
+        border-radius:20px ;
+        padding: 10px;
+
     }
 
     .name_input {
@@ -1011,10 +1027,10 @@ nav .icon {
         color: var(--sc_color);
         transition: transform 50ms ease-out 1ms;
 
-        button:active,
-        button:hover {
-            transform: scale(1.03);
-        }
+    }
+    .email form button:active
+     { 
+        transform: scale(1.1);
     }
 
     .extra_info {
