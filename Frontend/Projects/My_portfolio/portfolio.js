@@ -16,8 +16,14 @@ theme.addEventListener('click', () => {
 })
 let nav_btn = document.querySelector(".nav_btns .contact")
 let page6 = document.querySelector(".sixth_page")
-nav_btn.addEventListener('click', ()=>{
-  page6.scrollIntoView({behavior: 'smooth', block: 'center'})
+nav_btn.addEventListener('click', () => {
+  page6.scrollIntoView({ behavior: 'smooth', block: 'center' })
+})
+
+let explr_btn = document.querySelector(".hero .intro .work_github .work")
+let pageThree = document.querySelector(".thrd_page")
+explr_btn.addEventListener('click', () => {
+  pageThree.scrollIntoView({ behavior: 'smooth', block: 'center' })
 })
 
 const copyButton = document.querySelector(".cpy_btn");
@@ -107,6 +113,43 @@ document.querySelectorAll(".nav_links .links").forEach(e => {
     }
   })
 })
+
+const form = document.querySelector(".sixth_page .sixth_container .email .form")
+form.addEventListener('submit', async (fo) => {
+  fo.preventDefault();
+  const formData = new FormData(form)
+  const status = document.querySelector(".sixth_page .sixth_container .status")
+  try {
+    const response = await fetch("https://formspree.io/f/xppqvepw", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+    if (response.ok) {
+        status.textContent = "Message sent successfully."
+        status.style.display = "inline"
+        if(status.style.display = "inline"){
+          status.style.opacity = "0.5"
+          setTimeout(() => {
+            status.style.display = "none"
+          }, 1000);
+        }
+      form.reset()
+    } else {
+      setTimeout(() => {
+        status.textContent = "Something went wrong. Please try again."
+      }, 2000);
+    }
+  }
+  catch (error) {
+    status.textContent = "Network error. Please try again.";
+  }
+})
+
+
+
 document.querySelectorAll(".lasts li").forEach(en => {
   en.addEventListener('click', (eve) => {
     eve.preventDefault(); // Prevents default jump behavior if these are <a> tags
