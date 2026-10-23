@@ -469,7 +469,7 @@ nav .icon {
     align-items: flex-end;
     /* 👈 Keeps all bars on the bottom floor */
     gap: 0.5rem;
-    height: 4rem;
+    height: 8rem;
     /* 👈 Parent height */
     list-style-type: none;
     padding: 0;
