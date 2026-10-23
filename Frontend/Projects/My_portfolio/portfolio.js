@@ -53,7 +53,6 @@ let github_data = async function () {
     li.textContent = value
     li.style.height = `${value * 4}px`
   })
-  console.log(scandal)
 }
 github_data()
 let button1 = document.querySelector(".button1")
