@@ -56,18 +56,17 @@ let github_data = async function () {
     li.style.height = `${height}%`
     li.title = `${value} on ${day}`;
   })
-  let ctrSum = dailyCommits.reduce((total, val) =>{
+  let ctrSum = dailyCommits.reduce((total, val) => {
     return total + val
   })
-  total_cmts.textContent = ctrSum
-  let ctrCounts = data.last7Days.map(day=> day.contributionCount)
-  ctrCounts.filter(sum =>{sum})
-  if (ctrCounts > 0){
-    let conversion = ctrCounts/7 *100;
-    consistenc_rt.textContent = `${conversion}%`
-  }
-  else{
-    consistenc_rt.textContent = 0;
+  total_cmts.textContent = ctrSum;
+  let ctrCounts = data.last7Days.map(day => day.contributionCount);
+  let activeDays = ctrCounts.filter(count => count > 0);
+  if (activeDays.length > 0) {
+    let conversion = activeDays.length / 7 * 100;
+    consistenc_rt.textContent = `${conversion.toFixed(1)}%`;
+  } else {
+    consistenc_rt.textContent = "0%";
   }
 }
 github_data()
