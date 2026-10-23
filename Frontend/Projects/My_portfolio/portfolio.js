@@ -48,7 +48,10 @@ let github_data = async function () {
   let data = await response.json()
   let dailyCommits = [0, 0, 0, 0, 0, 0, 0];
   dailyCommits = data.last7Days.map(day => day.contributionCount)
-  console.log(dailyCommits)
+  scandal.forEach(li =>{
+    li.append(dailyCommits)
+  })
+  console.log(scandal)
 }
 github_data()
 let button1 = document.querySelector(".button1")
