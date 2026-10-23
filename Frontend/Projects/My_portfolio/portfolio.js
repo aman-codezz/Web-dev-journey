@@ -48,10 +48,13 @@ let github_data = async function () {
   let data = await response.json()
   let dailyCommits = [0, 0, 0, 0, 0, 0, 0];
   dailyCommits = data.last7Days.map(day => day.contributionCount)
-  scandal.forEach((li, index) =>{
+  scandal.forEach((li, index) => {
     let value = dailyCommits[index]
-    let height = Math.min(value*10, 90)
+    let day = new Date(data.last7Days[index].date)
+      .toLocaleDateString("en-US", { weekday: "long" });
+    let height = Math.min(value * 10, 90)
     li.style.height = `${height}%`
+    li.title = `${value} on ${day}`;
   })
 }
 github_data()
@@ -122,14 +125,14 @@ form.addEventListener('submit', async (fo) => {
       }
     })
     if (response.ok) {
-        status.textContent = "Message sent successfully."
-        status.style.display = "inline"
-        if(status.style.display = "inline"){
-          status.style.opacity = "0.5"
-          setTimeout(() => {
-            status.style.display = "none"
-          }, 1000);
-        }
+      status.textContent = "Message sent successfully."
+      status.style.display = "inline"
+      if (status.style.display = "inline") {
+        status.style.opacity = "0.5"
+        setTimeout(() => {
+          status.style.display = "none"
+        }, 1000);
+      }
       form.reset()
     } else {
       setTimeout(() => {
