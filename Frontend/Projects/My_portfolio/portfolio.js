@@ -61,9 +61,10 @@ let github_data = async function () {
   })
   total_cmts.textContent = ctrSum
   let ctrCounts = data.last7Days.map(day=> day.contributionCount)
+  ctrCounts.filter(sum =>{sum})
   if (ctrCounts > 0){
     let conversion = ctrCounts/7 *100;
-    consistenc_rt.textContent = conversion
+    consistenc_rt.textContent = `${conversion}%`
   }
   else{
     consistenc_rt.textContent = 0;
