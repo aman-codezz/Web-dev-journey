@@ -51,8 +51,6 @@ let github_data = async function () {
   scandal.forEach((li, index) =>{
     let value = dailyCommits[index]
     li.style.height = `${value * 10}%`
-    let height = document.querySelector(".scandal li:hover")
-    height.textContent = value
   })
 }
 github_data()
