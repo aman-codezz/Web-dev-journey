@@ -50,7 +50,8 @@ let github_data = async function () {
   dailyCommits = data.last7Days.map(day => day.contributionCount)
   scandal.forEach((li, index) =>{
     let value = dailyCommits[index]
-    li.style.height = `${value * 10}%`
+    let height = Math.min(value*10, 100)
+    li.style.height = `${height}%`
   })
 }
 github_data()

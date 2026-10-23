@@ -470,6 +470,7 @@ nav .icon {
     /* 👈 Keeps all bars on the bottom floor */
     gap: 0.5rem;
     height: 8rem;
+    overflow: hidden;
     /* 👈 Parent height */
     list-style-type: none;
     padding: 0;
