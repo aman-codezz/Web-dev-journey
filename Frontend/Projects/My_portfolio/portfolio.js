@@ -51,7 +51,7 @@ let github_data = async function () {
   scandal.forEach((li, index) =>{
     let value = dailyCommits[index]
     li.textContent = value
-    li.style.height = textContent
+    li.style.height = `${value * 4}px`
   })
   console.log(scandal)
 }
