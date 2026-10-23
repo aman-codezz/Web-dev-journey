@@ -57,7 +57,7 @@ let github_data = async function () {
     li.title = `${value} on ${day}`;
   })
   dailyCommits.reduce((total, val) =>{
-    let sum = total+val
+    let sum = total * val
     total_cmts.textContent = sum
   })
 }
