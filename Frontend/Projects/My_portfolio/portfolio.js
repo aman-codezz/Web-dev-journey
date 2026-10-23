@@ -60,6 +60,14 @@ let github_data = async function () {
     return total + val
   })
   total_cmts.textContent = ctrSum
+  let ctrCounts = data.last7Days.map(day=> day.contributionCount)
+  if (ctrCounts > 0){
+    let conversion = ctrCounts/7 *100;
+    consistenc_rt.textContent = conversion
+  }
+  else{
+    consistenc_rt.textContent = 0;
+  }
 }
 github_data()
 let button1 = document.querySelector(".button1")
