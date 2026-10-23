@@ -56,10 +56,10 @@ let github_data = async function () {
     li.style.height = `${height}%`
     li.title = `${value} on ${day}`;
   })
-  dailyCommits.reduce((total, val) =>{
-    let sum = total * val
-    total_cmts.textContent = sum
+  let ctrSum = dailyCommits.reduce((total, val) =>{
+    return total + val
   })
+  total_cmts.textContent = ctrSum
 }
 github_data()
 let button1 = document.querySelector(".button1")
