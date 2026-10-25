@@ -70,6 +70,47 @@ let github_data = async function () {
   }
 }
 github_data()
+
+let rounds = document.querySelectorAll(
+  ".round1, .round2, .round3, .round4"
+);
+
+rounds.forEach(round => {
+  let target = Number(round.dataset.target);
+  let progress = 0;
+
+  let interval = setInterval(() => {
+    progress++;
+
+    round.style.setProperty("--progress", progress);
+
+    if (progress >= target) {
+      clearInterval(interval);
+    }
+  }, 20);
+});
+
+let pageUrl = "https://aman-portfolio-lime-eta.vercel.app/portfolio.html"
+let strategy = "desktop"
+let apiKey = "AIzaSyC5ZyvtqRHGG-kw1ITBYjWKD2-syjP9_-k"
+let apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(pageUrl)}&strategy=${strategy}&category=performance&category=accessibility&category=best-practices&category=seo&key=${apiKey}`;
+async function getPerformance() {
+  let responses = await fetch(apiUrl)
+  let datas = await responses.json();
+  let categories = datas.lighthouseResult.categories;
+  let scores = [
+    categories.performance.score * 100,
+    categories.accessibility.score * 100,
+    categories["best-practices"].score * 100,
+    categories.seo.score * 100
+  ]
+  rounds.forEach((val, index)=>{
+    let all_score = scores[index]
+    val.textContent = all_score
+  })
+}
+getPerformance()
+
 let button1 = document.querySelector(".button1")
 button1.addEventListener('click', () => {
   window.open("https://github.com/aman-codezz")
@@ -86,13 +127,7 @@ let button4 = document.querySelector(".button4")
 button4.addEventListener('click', () => {
   window.open("https://vercel.com/aman-dev5")
 })
-// let li1 = document.querySelector(".nav_links  .one")
-// li1.addEventListener('click', ()=>{
-//   window.scrollTo({
-//   top: 1630,
-//   behavior: "smooth",
-// })
-// })
+
 document.querySelectorAll(".nav_links .links").forEach(e => {
   e.addEventListener('click', (events) => {
     events.preventDefault();
