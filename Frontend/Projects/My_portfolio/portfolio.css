@@ -5,8 +5,8 @@
 
 :root {
     --background-color: linear-gradient(to right,
-            #6366F1 0%,
-            #06B6D4 100%);
+    #6366F1 0%,
+    #06B6D4 100%);
     --border-color: rgba(128, 128, 128, 0.195);
     --margin: 7vw 4vw 7vw 4vw;
     --color: #9CA3AF;
@@ -25,10 +25,46 @@ body {
     background-color: #0B0F19;
     color: white;
     background-image: radial-gradient(ellipse 50% 9% at 20% 9%, #6365f11e, transparent 80%), radial-gradient(ellipse 80% 14% at 45% 9%, #06b5d42d, transparent 80%),
-        radial-gradient(ellipse 60% 15% at 47% 45%, #6365f12b, transparent 80%),
-        radial-gradient(ellipse 100% 9% at 20% 72.8%, #06b5d42d, transparent 100%);
+    radial-gradient(ellipse 60% 15% at 47% 45%, #6365f12b, transparent 80%),
+    radial-gradient(ellipse 100% 9% at 20% 72.8%, #06b5d42d, transparent 100%);
 }
 
+/* Hero entrance animation */
+
+@keyframes navBar {
+    from{
+        opacity: 0;
+        /* transform: translateY(-20px); */
+    }
+    to{
+        opacity: 1;
+        /* transform: translateY(0px); */
+    }
+}
+@keyframes headingEnter {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fromLeft {
+    from{
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+header {
+    animation: navBar 4s ease forwards;
+}
 header nav,
 ul {
     display: flex;
@@ -174,6 +210,7 @@ nav .icon {
     font-size: 13px;
     color: #6366F1;
     margin-bottom: 2rem;
+    animation: headingEnter 1s ease;
 }
 
 .hero .intro h1 {
@@ -182,6 +219,7 @@ nav .icon {
     font-size: 3.5rem;
     line-height: 4rem;
     margin-bottom: 1rem;
+    animation: headingEnter 1.35s ease forwards;
 }
 
 .hero .intro p {
@@ -189,6 +227,7 @@ nav .icon {
     font: size 18px;
     color: var(--color);
     margin-bottom: 2rem;
+    animation: headingEnter 1.65s ease forwards;
 }
 
 .work_github {
@@ -213,6 +252,7 @@ nav .icon {
     border-radius: 0.3rem;
     transition: transform 200ms ease-out 1ms;
     cursor: pointer;
+    animation: headingEnter 1.95s ease forwards;
 }
 
 .work img {
@@ -239,6 +279,7 @@ nav .icon {
     padding: 0.5rem 1.1rem 0.5rem 1.1rem;
     transition: transform 200ms ease-out 1ms;
     cursor: pointer;
+    animation: headingEnter 2.45s ease forwards;
 }
 
 .github img {
@@ -255,6 +296,7 @@ nav .icon {
     height: 67vh;
     width: 40vw;
     border-radius: 10px;
+    animation: fromLeft 3.45s ease forwards;
 }
 
 .nav {
@@ -403,6 +445,9 @@ nav .icon {
 .lang ul li::marker {
     color: #6366F1;
 }
+
+
+
 
 .scnd_page {
     display: grid;
@@ -602,7 +647,7 @@ nav .icon {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items:center ;
+            align-items: center;
             font-size: 16px;
             background-color: #10b98159;
             font-weight: bold;
