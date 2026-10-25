@@ -578,34 +578,32 @@ nav .icon {
     align-items: center;
     gap: 1rem;
 
-    .circles{
+    .circles {
         display: flex;
         flex-flow: column wrap;
         gap: 0.5rem;
         justify-content: center;
         align-items: center;
 
-        .round1, .round2, .round3, .round4{
-            font-family:'Outfit' ;
-            font-size:16px ;
-            font-weight: bold;
-            background-color:#10b98139 ;
-            color:#10B981 ;
-            border: 2px solid #10B981;
+        .round1,
+        .round2,
+        .round3,
+        .round4 {
+            --progress: 0;
+            background:
+                linear-gradient(#101827, #101827) padding-box,
+                conic-gradient(#10B981 calc(var(--progress) * 1%),
+                    #164e45 0) border-box;
+            border: 4px solid transparent;
             border-radius: 50%;
-           padding: 20px;
+            padding: 20px;
+            font-family: 'Outfit';
+            font-size: 16px;
+            background-color: #10b98159;
+            font-weight: bold;
+            color: #10B981;
         }
     }
-}
-
-.perf_mtrc .performance_info {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 3.3rem;
-    font-family: 'Inter';
-    font-weight: medium;
-    font-size: 12px;
-    color: var(--color);
 }
 
 .design_syst {
