@@ -33,7 +33,7 @@ copyButton.addEventListener("click", () => {
     .map((li) => li.innerText)
     .join("\n");
   navigator.clipboard.writeText(fullCode)
-  copyButton.title = ("Copied")
+  fullCode.title = `Copied`
 });
 
 let github = document.querySelector(".github")
