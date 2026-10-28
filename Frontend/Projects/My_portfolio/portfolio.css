@@ -366,7 +366,12 @@ nav .icon {
     width: 100%;
     /* object-fit: cover; */
 }
-
+pre{
+    display: flex;
+    flex-flow: column;
+    column-wrap: wrap;
+    padding: 1rem 1rem 1rem 0rem;
+}
 .mac_disp ol {
     font-family: 'jetbrains mono';
     font-size: 0.75rem;
