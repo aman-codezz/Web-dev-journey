@@ -368,6 +368,7 @@ pre{
     display: flex;
     flex-flow: column;
     column-wrap: wrap;
+    just
     padding: 1rem 1rem 1rem 0rem;
 }
 .mac_disp ol {
@@ -378,7 +379,6 @@ pre{
     flex-direction: column;
     gap: 0.5rem;
     margin-left: 1rem;
-    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .mac_disp ol .line {
