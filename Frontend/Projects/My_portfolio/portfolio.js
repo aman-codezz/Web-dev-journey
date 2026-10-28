@@ -32,8 +32,11 @@ copyButton.addEventListener("click", () => {
   const fullCode = Array.from(codeLines)
     .map((li) => li.innerText)
     .join("\n");
-  navigator.clipboard.writeText(fullCode)
-  copyButton.title = "Copied";
+  navigator.clipboard.writeText(fullCode).then(()=>{
+    copyButton.title = "Copied";
+  }).catch((error)=>{
+    alert("Copy fail",error);
+  })
 });
 
 let github = document.querySelector(".github")
