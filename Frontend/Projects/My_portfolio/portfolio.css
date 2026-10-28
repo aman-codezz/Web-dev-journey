@@ -293,8 +293,6 @@ nav .icon {
 
 .mac_disp {
     border: 1px solid var(--border-color);
-    height: 67vh;
-    width: 40vw;
     border-radius: 10px;
     animation: fromLeft 3.45s ease forwards;
 }
