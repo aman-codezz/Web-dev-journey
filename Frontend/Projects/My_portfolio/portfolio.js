@@ -32,7 +32,11 @@ copyButton.addEventListener("click", () => {
   const fullCode = Array.from(codeLines)
     .map((li) => li.innerText)
     .join("\n");
-  navigator.clipboard.writeText(fullCode)
+  navigator.clipboard.writeText(fullCode).then(()=>{
+    copyButton.title = "Copied";
+  }).catch((error)=>{
+    alert("Copy fail",error);
+  })
 });
 
 let github = document.querySelector(".github")
@@ -62,33 +66,16 @@ let github_data = async function () {
   total_cmts.textContent = ctrSum;
   let ctrCounts = data.last7Days.map(day => day.contributionCount);
   let activeDays = ctrCounts.filter(count => count > 0);
+  let conversion = activeDays.length / 7 * 100;
+  conversion.hidden = true;
   if (activeDays.length > 0) {
-    let conversion = activeDays.length / 7 * 100;
     consistenc_rt.textContent = `${conversion.toFixed(1)}%`;
+    conversion.hidden = false;
   } else {
     consistenc_rt.textContent = "0%";
   }
 }
 github_data()
-
-let rounds = document.querySelectorAll(
-  ".round1, .round2, .round3, .round4"
-);
-
-rounds.forEach(round => {
-  let target = Number(round.dataset.target);
-  let progress = 0;
-
-  let interval = setInterval(() => {
-    progress++;
-
-    round.style.setProperty("--progress", progress);
-
-    if (progress >= target) {
-      clearInterval(interval);
-    }
-  }, 20);
-});
 
 let pageUrl = "https://aman-portfolio-lime-eta.vercel.app/portfolio.html"
 let strategy = "desktop"

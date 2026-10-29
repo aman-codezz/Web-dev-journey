@@ -293,8 +293,6 @@ nav .icon {
 
 .mac_disp {
     border: 1px solid var(--border-color);
-    height: 67vh;
-    width: 40vw;
     border-radius: 10px;
     animation: fromLeft 3.45s ease forwards;
 }
@@ -366,7 +364,12 @@ nav .icon {
     width: 100%;
     /* object-fit: cover; */
 }
-
+pre{
+    display: flex;
+    flex-flow: column;
+    column-wrap: wrap;
+    padding: 1rem 1rem 1rem 0rem;
+}
 .mac_disp ol {
     font-family: 'jetbrains mono';
     font-size: 0.75rem;
@@ -375,7 +378,6 @@ nav .icon {
     flex-direction: column;
     gap: 0.5rem;
     margin-left: 1rem;
-    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .mac_disp ol .line {
@@ -497,6 +499,7 @@ nav .icon {
     font-family: 'Inter';
     font-weight: regular;
     font-size: 11px;
+    animation: navBar 4s ease forwards;
 }
 
 .graph .main_graph .disc .one p {
@@ -504,6 +507,9 @@ nav .icon {
     font-family: 'Outfit';
     font-weight: bold;
     font-size: 18px;
+    padding-bottom: 1.5rem;
+    height:23px;
+    width:90.26px
 }
 
 .graph .main_graph .disc .two p {
@@ -511,6 +517,9 @@ nav .icon {
     font-family: 'Outfit';
     font-weight: bold;
     font-size: 18px;
+    padding-bottom: 1.5rem;
+    height:23px;
+    width:90.26px
 }
 
 /* 1. On .scandal: Change display to flex */
