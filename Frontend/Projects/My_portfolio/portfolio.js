@@ -44,6 +44,11 @@ github.addEventListener('click', () => {
   window.open("https://github.com/aman-codezz")
 })
 
+let language = document.querySelector(".lang ul")
+setInterval(() => {
+  language.style.transform="translateX(1000px)"
+}, 2000);
+
 let scandal = document.querySelectorAll("#git-chart li")
 let consistenc_rt = document.querySelector("#consistency-rate")
 let total_cmts = document.querySelector("#total-commits")
