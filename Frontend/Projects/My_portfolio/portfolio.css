@@ -507,6 +507,8 @@ pre{
     font-weight: bold;
     font-size: 18px;
     padding-bottom: 1.5rem;
+    height:23px;
+    width:90.26px
 }
 
 .graph .main_graph .disc .two p {
@@ -515,6 +517,8 @@ pre{
     font-weight: bold;
     font-size: 18px;
     padding-bottom: 1.5rem;
+    height:23px;
+    width:90.26px
 }
 
 /* 1. On .scandal: Change display to flex */
