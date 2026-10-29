@@ -66,9 +66,11 @@ let github_data = async function () {
   total_cmts.textContent = ctrSum;
   let ctrCounts = data.last7Days.map(day => day.contributionCount);
   let activeDays = ctrCounts.filter(count => count > 0);
+  let conversion = activeDays.length / 7 * 100;
+  conversion.hidden = true;
   if (activeDays.length > 0) {
-    let conversion = activeDays.length / 7 * 100;
     consistenc_rt.textContent = `${conversion.toFixed(1)}%`;
+    conversion.hidden = false;
   } else {
     consistenc_rt.textContent = "0%";
   }
