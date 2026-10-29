@@ -75,25 +75,6 @@ let github_data = async function () {
 }
 github_data()
 
-let rounds = document.querySelectorAll(
-  ".round1, .round2, .round3, .round4"
-);
-
-rounds.forEach(round => {
-  let target = Number(round.dataset.target);
-  let progress = 0;
-
-  let interval = setInterval(() => {
-    progress++;
-
-    round.style.setProperty("--progress", progress);
-
-    if (progress >= target) {
-      clearInterval(interval);
-    }
-  }, 20);
-});
-
 let pageUrl = "https://aman-portfolio-lime-eta.vercel.app/portfolio.html"
 let strategy = "desktop"
 let apiKey = "AIzaSyC5ZyvtqRHGG-kw1ITBYjWKD2-syjP9_-k"
