@@ -45,6 +45,13 @@ github.addEventListener('click', () => {
 })
 
 let language = document.querySelector(".lang ul")
+let position = 0
+function moveStack(){
+  position+=1
+  language.style.transform=`translateX(${position}px)`
+  requestAnimationFrame(moveStack)
+}
+// moveStack()
 
 let scandal = document.querySelectorAll("#git-chart li")
 let consistenc_rt = document.querySelector("#consistency-rate")
