@@ -61,6 +61,14 @@ body {
         transform: translateX(0px);
     }
 }
+@keyframes animate {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
 
 header {
     animation: navBar 4s ease forwards;
@@ -434,11 +442,14 @@ pre{
     border: 1px solid var(--border-color);
     border-right: none;
     border-left: none;
+    --margin: 7vw 0vw 7vw 0vw;
     margin: var(--margin);
     padding: 1rem 0 1rem 0;
+    overflow: hidden;
 }
 
 .lang ul li {
+    /* animation: animate 3s infinite ease-in-out alternate-reverse; */
     font-family: 'Outfit';
     font-weight: semi-bold;
     font-size: 1rem;
@@ -944,14 +955,14 @@ pre{
     justify-content: space-between;
 
     .Aman_img {
-        height: 480px;
-        width: 100vw;
+        /* height: 80vh; */
+        /* width: 100vw; */
 
         img {
-            height: 100%;
-            width: 100%;
+            height:95%;
+            width: 85%;
             object-fit: cover;
-            border-radius: 30px;
+            border-radius: 5%;
         }
     }
 
