@@ -1,0 +1,19 @@
+{
+  "name": "aman-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website showcasing frontend development skills and projects",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "web-development"
+  ],
+  "author": "Aman",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}

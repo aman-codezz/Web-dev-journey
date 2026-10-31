@@ -1,3 +1,7 @@
+// Initialize Vercel Speed Insights
+import { injectSpeedInsights } from '@vercel/speed-insights';
+injectSpeedInsights();
+
 let theme = document.querySelector(".toggle")
 let iswhite = false
 theme.addEventListener('click', () => {
