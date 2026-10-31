@@ -438,7 +438,7 @@ pre{
     color: #374151;
 }
 
-.lang ul {
+.lang .lang-ul {
     border: 1px solid var(--border-color);
     border-right: none;
     border-left: none;
@@ -446,6 +446,10 @@ pre{
     margin: var(--margin);
     padding: 1rem 0 1rem 0;
     overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .lang ul li {
