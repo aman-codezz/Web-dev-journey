@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this website shows you my skills projects etc">
+    <meta name="google-site-verification" content="8hH4FwHG5jtoZkNgZioa63gfOQzV47nCyl9lwVLqyKM" />
+    <title>Aman | Frontend Developer & Designer</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="icons">
+                <div class="icon">A</div>
+                <div class="avaibility">
+                    <ul>
+                        <li>Available for roles</li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="nav_links">
+                <li class="one links">Projects</li>
+                <li class="two links">Stack</li>
+                <li class="three links">Architecture</li>
+                <li class="four links">About</li>
+            </ul>
+            <div class="nav_btns">
+                <button class="toggle"><img src="Assets/Vector.svg" alt="theme-mode"></button>
+                <button class="contact">Let's Talk</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="intro">
+                <h4>🚀 Building Next-Gen Interactive Web Experiences</h4>
+                <h1>Frontend Developer Crafting High-Performance SaaS Interfaces.</h1>
+                <p>Specializing in clean JavaScript architecture, moder UI, and accessible web systems built for speed.
+                </p>
+                <div class="work_github">
+                    <button class="work">Explore Selected Work <img src="Assets/arrow_img.svg" alt="arrow"></button>
+                    <button class="github"><img src="Assets/github_img.svg" alt="github">View Github</button>
+                </div>
+            </div>
+            <div class="mac_disp">
+                <div class="nav">
+                    <div class="dots">
+                        <div class="dot1"></div>
+                        <div class="dot2"></div>
+                        <div class="dot3"></div>
+                    </div>
+                    <strong class="file_name">fetchData.js</strong>
+                    <button class="cpy_btn"><img src="Assets/copy.svg" alt="copy_button"></button>
+                </div>
+                <pre>
+                <ol type="1">
+                    <li class="line1 line">function fetchData(endpoint) {</li>
+                    <li class="line2 line">  return fetch(`https://api.example.com/${endpoint}`)</li>
+                    <li class="line3 line">    .then((response) => {</li>
+                    <li class="line4 line">      if (!response.ok) {</li>
+                    <li class="line5 line">        throw new Error(`Status: ${response.status}`);</li>
+                    <li class="line6 line">      }</li>
+                    <li class="line7 line">      return response.json();</li>
+                    <li class="line8 line">    })</li>
+                    <li class="line9 line">    .then((data) => {</li>
+                    <li class="line10 line">      return { success: true, payload: data };</li>
+                    <li class="line11 line">    })</li>
+                    <li class="line12 line">    .catch((error) => {</li>
+                    <li class="line13 line">      return { success: false, message: error.message };</li>
+                    <li class="line14 line">    });}</li>
+                </ol>
+                </pre>
+            </div>
+        </section>
+        <div class="lang">
+            <ul class="lang-ul">
+                <li>Git</li>
+                <li>Node.js</li>
+                <li>GraphQL</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Vercel</li>
+            </ul>
+        </div>
+        <section class="scnd_page">
+            <div class="graph">
+                <h2>Flagship SaaS Dashboard</h2>
+                <p>Interactive metrics dashboard built with vanilla JavaScript DOM manipulation & asynchronous API
+                    fetching.</p>
+                <div class="main_graph">
+                    <div class="disc">
+                        <div class="one">Recent Contributions <br>
+                            <p id="total-commits"></p>
+                        </div>
+                        <div class="two">Consistency Rate <br>
+                            <p id="consistency-rate"></p>
+                        </div>
+                    </div>
+                    <ol class="scandal" id="git-chart">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="component_arch">
+                <h2>Component Architecture</h2>
+                <p>Strict Atomic modular components documented with high test coverage.</p>
+                <div class="comp_data">
+                    <div class="atom"><img src="Assets/atom.png" alt="img">Atoms (Button, Input)</div>
+                    <div class="chart-network"><img src="Assets/chart-network.png" alt="img">Molecules (FormField,
+                        Header)</div>
+                    <div class="atom-wht"><img src="Assets/atom-white.png" alt="img">Organisms (UserForm, Navigation)
+                    </div>
+                </div>
+            </div>
+            <div class="perf_mtrc">
+                <h2>Performance Metrics</h2>
+                <p>Lighthouse scores engineered to top limits.<br>Perfect Core Web Vitals on production deployment</p>
+                <div class="performance">
+                    <div class="circles circle1">
+                        <div class="round1" data-target="20"></div>
+                        <p>Perf</p>
+                    </div>
+                    <div class="circles circle2">
+                        <div class="round2" data-target="30"></div>
+                        <p>Access</p>
+                    </div>
+                    <div class="circles circle3">
+                        <div class="round3" data-target="40"></div>
+                        <p>Best</p>
+                    </div>
+                    <div class="circles circle4">
+                        <div class="round4" data-target="70"></div>
+                        <p>SEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="design_syst">
+                <h2>Design System Sync</h2>
+                <p>Maintaining semantic layout guidlines, custom typography variables, and consistent spatial design</p>
+                <div class="container">
+                    <div class="boxes box1"></div>
+                    <div class="boxes box2"></div>
+                    <div class="boxes box3"></div>
+                    <div class="boxes box4"></div>
+                    <div class="inside_cntr">
+                        <strong>Outfit Display 56px</strong>
+                        <p>Inter Text 16px (height: 1.6)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="thrd_page">
+            <div class="eyebrow">Selected Work</div>
+            <h1>Projects That Define My Craft</h1>
+            <div class="cards">
+                <div class="grids card1">
+                    <div class="img">
+                        <img src="Assets/project-mockup.png" alt="prject_img">
+                    </div>
+                    <div class="inside_card">
+                        <h2>Project Name</h2>
+                        <div class="below_img_tags">
+                            <div class="tags">HTML</div>
+                            <div class="tags">JS</div>
+                            <div class="tags">CSS</div>
+                            <div class="tags">NODE.JS</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sequi possimus quaerat iusto,
+                            voluptatibus sapiente!</p>
+                        <button>Explore Project <img src="Assets/chevron-right.png" alt="Arrow" srcset=""></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forth_page">
+            <div class="eyebrow">How I Build</div>
+            <h1>Engineering Flow & Systems</h1>
+            <div class="box_container">
+                <div class="card_boxes box1">
+                    <div class="top">
+                        <div class="img_box1"><img src="Assets/database-search.png" alt="database-img"></div>
+                        <h1>01</h1>
+                    </div>
+                    <h2>Discovery & Research</h2>
+                    <p>Identifying performance constraints, structural dependencies, and accessible requirements before
+                        coding.</p>
+                </div>
+                <div class="card_boxes box2">
+                    <div class="top">
+                        <div class="img_box2"><img src="Assets/icon-square.png" alt="icon-square_img"></div>
+                        <h1>02</h1>
+                    </div>
+                    <h2>Architecture & Design</h2>
+                    <p>Drafting the state machine, API hook patterns, design tokens, and planning the routing paths.</p>
+                </div>
+                <div class="card_boxes box3">
+                    <div class="top">
+                        <div class="img_box3"><img src="Assets/code-2.png" alt="code-2_img"></div>
+                        <h1>03</h1>
+                    </div>
+                    <h2>Development & Testing</h2>
+                    <p>Writing component layers with custom unit testing frameworks and validating keyboard navigation
+                        controls.</p>
+                </div>
+                <div class="card_boxes box4">
+                    <div class="top">
+                        <div class="img_box4"><img src="Assets/icon-container.png" alt="icon-container_img"></div>
+                        <h1>04</h1>
+                    </div>
+                    <h2>Deployment & Monitoring</h2>
+                    <p>Automating serverless pushes with real-time error and Vercel edge deployment.</p>
+                </div>
+            </div>
+        </section>
+        <section class="fifth_page">
+            <div class="Aman_img">
+                <img src="Assets/profile.jpg" alt="profle_img">
+            </div>
+            <div class="about_right">
+                <div class="eyebrow">About Me</div>
+                <h1>Passion for High Fidelity Interactive Interfaces</h1>
+                <p>I am a frontend engineer obsessed with UI transitions, layout systems and optimizing load milestones
+                    down to milliseconds. I bridge the gap between creative visual designers, shipping production code
+                    that represents both beautiful brand identity and clean robust standards.</p>
+                <div class="expertise">
+                    <div class="experience">
+                        <h1>1 Month</h1>
+                        <p>Experience</p>
+                    </div>
+                    <div class="Completed">
+                        <h1>1 Project</h1>
+                        <p>Completed</p>
+                    </div>
+                    <div class="Client Satisfaction">
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sixth_page">
+            <h1>Let's Build Something Extraordinary</h1>
+            <p>Have an exciting project, architecturalchallenge, or full-time position? Get in <br> touchand let's
+                configure a plan.</p>
+            <div class="sixth_container">
+                <div class="email">
+                    <form method="post" class="form">
+                        <div class="name_input">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="name" name="name" required>
+                        </div>
+                        <div class="email_client">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="message">
+                            <label for="comment">Message</label>
+                            <textarea id="comment" name="comment" rows="5" cols="40" required
+                                placeholder="Tell me what you're looking to build..."></textarea>
+                        </div>
+                        <button type="submit">Send message</button>
+                    </form>
+                    <p class="status show">Message sent successfully.</p>
+                </div>
+                <div class="extra_info">
+                    <div class="email_addrs">
+                        <img src="Assets/Email.png" alt="email_img" srcset="">
+                        <div class="address">
+                            <p class="para">Email</p>
+                            <div>mdamanan558@gmail.com.</div>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img src="Assets/location.png" alt="email_img" srcset="">
+                        <div class="specific_loc">
+                            <p class="para">Location</p>
+                            <div>India, UP</div>
+                        </div>
+                    </div>
+                    <div class="sc_extra">
+                        <strong>Follow Developer Channels</strong>
+                        <div class="images">
+                            <button class="button1"><img src="Assets/Frame.png" alt="github" srcset=""></button>
+                            <button class="button2"><img src="Assets/Frame (1).png" alt="linkedin" srcset=""></button>
+                            <button class="button3"><img src="Assets/Frame (2).png" alt="X" srcset=""></button>
+                            <button class="button4"><img src="Assets/Frame (3).png" alt="VS_code" srcset=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="last">
+                <strong>Aman/dev</strong>
+                <p>&copy 2026. All rights preserved.</p>
+            </div>
+            <div class="lasts">
+                <ol>
+                    <li class="ek">Projects</li>
+                    <li class="do">Stack</li>
+                    <li class="teen">Privacy</li>
+                    <li class="chaar">Terms</li>
+                </ol>
+            </div>
+        </footer>
+    </main>
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
