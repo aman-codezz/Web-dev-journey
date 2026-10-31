@@ -100,6 +100,7 @@ async function getPerformance() {
     categories["best-practices"].score * 100,
     categories.seo.score * 100
   ]
+  let rounds = document.querySelectorAll(".scnd_page .perf_mtrc .performance .circles .round1 , .round2 , .round3 , .round4")
   rounds.forEach((val, index)=>{
     let all_score = scores[index]
     val.textContent = all_score
