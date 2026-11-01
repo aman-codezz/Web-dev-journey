@@ -104,6 +104,8 @@ async function getPerformance() {
   rounds.forEach((val, index)=>{
     let all_score = scores[index]
     val.textContent = all_score
+    // val.style.background = "conic-gradient(from 0deg at 50% 50%, #06d49a "+all_score+"%, #41f3bb3f "+all_score+"%)"
+    // val.style.transition = "background 1s ease-in-out"
   })
 }
 getPerformance()
