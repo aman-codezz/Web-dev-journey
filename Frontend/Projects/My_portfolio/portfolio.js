@@ -104,8 +104,6 @@ async function getPerformance() {
   rounds.forEach((val, index)=>{
     let all_score = scores[index]
     val.textContent = all_score
-    // val.style.background = "conic-gradient(from 0deg at 50% 50%, #06d49a "+all_score+"%, #41f3bb3f "+all_score+"%)"
-    // val.style.transition = "background 1s ease-in-out"
   })
 }
 getPerformance()
@@ -195,9 +193,7 @@ form.addEventListener('submit', async (fo) => {
 
 document.querySelectorAll(".lasts li").forEach(en => {
   en.addEventListener('click', (eve) => {
-    eve.preventDefault(); // Prevents default jump behavior if these are <a> tags
-
-    // Selecting the target sections correctly for this block
+    eve.preventDefault()
     const pageTeen = document.querySelector(".thrd_page");
     const page1 = document.querySelector(".lang ul");
 
