@@ -1655,6 +1655,10 @@ footer {
     .github {
         font-size: 0.85rem;
         padding: 0.65rem 0.85rem;
+        width: 100%;
+        display: flex;
+        justify-content: center ;
+        flex-direction: column wrap;
     }
 
     .mac_disp .nav {
