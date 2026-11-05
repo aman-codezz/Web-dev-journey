@@ -1798,3 +1798,110 @@ footer {
         gap: 0.75rem 1.25rem;
     }
 }
+
+/* Mobile hamburger navigation only */
+.menu-toggle {
+    display: none;
+    width: 34px;
+    height: 34px;
+    padding: 5px 2px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+    background: white;
+    transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.menu-toggle.is-active span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    header nav {
+        position: relative;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 0;
+    }
+
+    header nav .icons {
+        order: 1;
+        min-width: 0;
+    }
+
+    header nav .nav_btns {
+        order: 2;
+        margin-left: auto;
+        gap: 1rem;
+    }
+
+    header nav .nav_btns .contact {
+        display: none;
+    }
+
+    header nav .menu-toggle {
+        display: flex;
+    }
+
+    header nav .nav_links {
+        display: none !important;
+        position: absolute;
+        top: calc(100% + 0.65rem);
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        flex: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0;
+        margin: 0;
+        padding: 0.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 18px;
+        background: #111827;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    }
+
+    header nav .nav_links.is-open {
+        display: flex !important;
+    }
+
+    header nav .nav_links li {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    header nav .nav_btns {
+        gap: 0.8rem;
+    }
+
+    header nav .toggle {
+        width: 28px;
+        height: 22px;
+    }
+}
