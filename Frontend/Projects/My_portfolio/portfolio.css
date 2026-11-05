@@ -1557,7 +1557,7 @@ footer {
 
     .fifth_page .about_right .expertise {
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-around;
         gap: 1.25rem;
     }
 
