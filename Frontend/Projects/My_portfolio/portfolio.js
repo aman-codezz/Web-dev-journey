@@ -205,3 +205,27 @@ document.querySelectorAll(".lasts li").forEach(en => {
     }
   });
 });
+/* Mobile hamburger menu only */
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileNav = document.querySelector("#mobile-nav");
+
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("is-open");
+    menuToggle.classList.toggle("is-active", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  mobileNav.querySelectorAll("li").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("is-open");
+      menuToggle.classList.remove("is-active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+}
