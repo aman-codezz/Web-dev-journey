@@ -1907,6 +1907,8 @@ footer {
 
     header nav .toggle {
         width: 28px;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
         height: 22px;
     }
 }
