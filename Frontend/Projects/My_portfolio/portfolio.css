@@ -1913,4 +1913,7 @@ footer {
         outline: none;
         height: 22px;
     }
+     header nav .nav_links{
+        z-index: 1;
+     }
 }
