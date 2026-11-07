@@ -84,13 +84,8 @@ body {
 }
 
 @keyframes marquee {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(calc(-1 * var(--move-distance)));
-    }
+   from{transform:translateX(0%);}
+   to{transform:translateX(-100%);}
 }
 header {
     animation: navBar 4s ease forwards;
@@ -98,7 +93,7 @@ header {
 
 header nav,
 ul {
-    display: flex;
+    display: flex;  
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
@@ -477,21 +472,26 @@ pre {
 
     .lang-track {
         display: flex;
-        width: max-content;
         overflow: hidden;
-        gap: 3.5rem;
-        /* transform: translateX(calc(-1 * var(--move-distance))); */
+
+        .lang-track::-webkit-scrollbar {
+            display: none;
+        }
         
-        #original,
-        #duplicate,
-        #triplet {
-            animation: marquee 12s linear infinite;
+        .original{
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-flow: row nowrap;
-            flex-shrink: 0;
+            animation: marquee 2s linear infinite;
             gap: 3rem;
-            padding: 0;
-            margin: 0;
+           
+           
+            .stack{
+                flex: 0 0 max-content;
+                text-align: center;
+                align-content: center;
+            }
         }
     }
 }
