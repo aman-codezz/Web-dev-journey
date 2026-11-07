@@ -890,6 +890,8 @@ pre {
     color: #06B6D4;
     background-color: var(--bg-color2);
     transition: transform 100ms ease 1ms;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 
     img {
         margin-left: 0.25rem;
