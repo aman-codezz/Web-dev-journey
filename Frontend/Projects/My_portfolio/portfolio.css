@@ -1639,7 +1639,6 @@ footer {
 
     .hero .intro h1 {
         font-size: clamp(2rem, 9vw, 2.6rem);
-        line-height: 1.12;
     }
 
     .hero .intro p {
@@ -1840,6 +1839,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: relative;
+        z-index: 2;
+    }
+
     header nav {
         position: relative;
         flex-wrap: nowrap;
@@ -1875,7 +1879,6 @@ footer {
         top: calc(100% + 0.65rem);
         left: 0;
         right: 0;
-        z-index: 100;
         flex: none;
         flex-direction: column;
         align-items: stretch;
@@ -1913,7 +1916,5 @@ footer {
         outline: none;
         height: 22px;
     }
-     header nav .nav_links{
-        z-index: 1;
-     }
+
 }
