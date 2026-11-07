@@ -108,6 +108,10 @@ async function getPerformance() {
 }
 getPerformance()
 
+let projectBtn = document.querySelector(".thrd_page .card1 .inside_card button")
+projectBtn.addEventListener('click', () => {
+  window.open("https://aman-portfolio-lime-eta.vercel.app/")
+})
 let button1 = document.querySelector(".button1")
 button1.addEventListener('click', () => {
   window.open("https://github.com/aman-codezz")
