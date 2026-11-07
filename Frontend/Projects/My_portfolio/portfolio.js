@@ -229,3 +229,11 @@ if (menuToggle && mobileNav) {
     });
   });
 }
+
+// lang stack animation logic
+
+let original = document.querySelector("#original")
+let duplicate = document.querySelector("#duplicate")
+let langStack = document.querySelector(".lang-track")
+let totalWidth = original.offsetWidth + 56
+langStack.style.setProperty("--move-distance", `${totalWidth}px`)
