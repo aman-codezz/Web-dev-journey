@@ -274,12 +274,6 @@ body {
         justify-content: center;
     }
 
-    .logo > span:last-child,
-    .workspace > div:last-child,
-    .nav-link:not(.active) small,
-    .nav-link {
-        /* Mobile sidebar will be refined later */
-    }
 
     .workspace {
         justify-content: center;
