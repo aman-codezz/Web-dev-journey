@@ -1,3 +1,115 @@
 *{
     margin: 0;
+    padding: 0;
+}
+:root{
+    --color: #635bff;
+    --border-color: #EAEAE7;
+    --color2:#85858D;
+}
+aside{
+    margin-left: 1rem;
+    margin-top:1.875rem;
+    width:15vw;
+}
+#top div:first-child{
+    display: flex;
+    gap:0.625rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-family:'Inter';
+    padding-left: 0.625rem;
+    position: relative;
+    margin-bottom: 1.875rem;
+
+    h1{
+        color: var(--color);
+    }
+    h2{
+        position: absolute;
+        bottom:0.3125rem;
+        left:2.325rem;
+    }
+}
+#workspace-switcher{
+    border: 1px solid var(--border-color);
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius:10px;
+    margin-bottom: 1.875rem;
+
+    #workspace-mono{
+        border-radius: 10px;
+        font-family: 'Inter';
+        font-size: 10px;
+        font-weight: semibold;
+        padding:10px;
+        background-color: #F4F4F2;
+        margin:0px;
+    }
+    h3{
+        font-family: 'Inter';
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    p{
+        font-family: 'Inter';
+        font-size: 10px;
+        font-weight: regular;
+        /* letter-spacing: 1px; */
+        color: var(--color2);
+    }
+}
+#main-nav{
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;    
+    
+    #overview{
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* #clients{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    } */
+
+    .active{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.625rem;
+        padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+        border-radius:10px;
+        
+
+        .logo{
+            font-size: 20px;
+            color: var(--color2);
+            margin: 0px;
+        }
+        .item{
+            font-family:'Inter';
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--color2);
+            padding: 0px;
+        }
+    }
 }
