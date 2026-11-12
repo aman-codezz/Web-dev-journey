@@ -6,6 +6,7 @@
     --color: #635bff;
     --border-color: #EAEAE7;
     --color2:#85858D;
+    --background-color:#F0EFFF ;
 }
 aside{
     margin-left: 1rem;
@@ -68,29 +69,17 @@ aside{
 #main-nav{
     display: flex;
     flex-flow: column nowrap;
-    /* justify-content: flex-start;
-    align-items: flex-start; */
     gap: 0.625rem;
-    margin-bottom: 1.875rem;    
+    margin-bottom: 1.875rem;  
     
     #overview{
         margin: 0;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
         align-items: center;
     }
 
-    /* #clients{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-    } */
-
     .active{
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow:row nowrap;
         justify-content: flex-start;
         align-items: center;
         gap: 0.625rem;
@@ -102,6 +91,15 @@ aside{
             font-size: 20px;
             color: var(--color2);
             margin: 0px;
+            padding: 0;
+            height: 20px;
+            width: 20px;
+
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
         }
         .item{
             font-family:'Inter';
@@ -111,5 +109,15 @@ aside{
             color: var(--color2);
             padding: 0px;
         }
+    }
+     .active:hover, .active .item:hover{
+        color: var(--color);
+        background-color:var(--background-color) ;
+        cursor: pointer;
+    }
+    .active:active{
+        color: var(--color);
+        background-color:var(--background-color) ;
+        cursor: pointer;
     }
 }
