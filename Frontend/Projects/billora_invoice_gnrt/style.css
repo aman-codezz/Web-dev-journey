@@ -179,22 +179,59 @@ aside {
         width: 100%;
     }
 
-        .logo {
-            font-size: 20px;
-            color: var(--color2);
-            margin: 0px;
-            padding: 0;
-            height: 18px;
-            width: 18px;
+    .logo {
+        font-size: 20px;
+        color: var(--color2);
+        margin: 0px;
+        padding: 0;
+        height: 18px;
+        width: 18px;
 
-            img {
-                object-fit: contain;
-                height: 100%;
-                width: 100%;
-            }
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
 
-            img:hover {
-                background-color: var(--color);
-            }
+        img:hover {
+            background-color: var(--color);
         }
     }
+
+    #name {
+        border: 1px solid var(--border-color);
+        padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.625rem;
+        border-radius: 10px;
+        margin: 1.875rem 0rem 1.875rem 0rem;
+
+        #workspace-mono {
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-size: 10px;
+            font-weight: semibold;
+            padding: 10px;
+            background-color: #F4F4F2;
+            margin: 0px;
+        }
+
+        h3 {
+            font-family: 'Inter';
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-family: 'Inter';
+            font-size: 10px;
+            font-weight: regular;
+            /* letter-spacing: 1px; */
+            color: var(--color2);
+        }
+    }
+}
