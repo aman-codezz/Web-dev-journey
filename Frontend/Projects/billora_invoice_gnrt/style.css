@@ -235,3 +235,23 @@ aside {
         }
     }
 }
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav button{
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+    border:none;
+    width: 18px;
+    height: 18px;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
