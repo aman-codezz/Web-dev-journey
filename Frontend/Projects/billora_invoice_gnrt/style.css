@@ -240,6 +240,7 @@ nav{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    gap: 0.75rem;
 }
 nav button{
     appearance: none;
@@ -253,5 +254,9 @@ nav button{
         height: 100%;
         width: 100%;
         object-fit: contain;
+    }
+    img:active{
+        transform: scale(1.1);
+        transition: transform 50ms ease 1ms;
     }
 }
